@@ -1,0 +1,31 @@
+{% include 'elspw_product' %}
+{% section 'product-template' %}
+{% section 'product-recommendations' %}
+{% section 'recently-viewed-products' %}
+
+<script>
+  window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)};
+  ShopifyXR('addModels', {{ product.media | where: 'media_type', 'model' | json }});
+</script>
+
+
+
+
+
+{{ 'custom-common.css' | asset_url | stylesheet_tag }}
+{{ 'custom-page.css' | asset_url | stylesheet_tag }}
+
+
+
+
+<div class="Container">
+  <header class="PageHeader">
+    <div class="SectionHeader SectionHeader--center">
+      <h1 class="SectionHeader__Heading Heading u-h1">{{ page.title }}</h1>
+    </div>
+  </header>
+
+  <div class="PageContent PageContent--narrow">
+    {{ page.content }}
+  </div>
+</div>

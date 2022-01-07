@@ -1,0 +1,25 @@
+{% include 'elspw_product' %}
+{% section 'product-template' %}
+{% section 'product-recommendations' %}
+{% section 'recently-viewed-products' %}
+
+<script>
+  window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)};
+  ShopifyXR('addModels', {{ product.media | where: 'media_type', 'model' | json }});
+</script>
+
+
+
+
+
+<p class="line-item-property__field">
+  <label>イベント参加理由</label><br>
+  <input required class="required" type="radio" name="properties[_イベント参加理由]" value="test"> <span>test</span><br>
+  <input required class="required" type="radio" name="properties[_イベント参加理由]" value="test2"> <span>test2</span><br>
+  <input required class="required" type="radio" name="properties[_イベント参加理由]" value="test3"> <span>test3</span><br>
+</p>
+
+<p class="line-item-property__field">
+  <label for="">刻印</label>
+  <input required class="required" id="" type="text" name="properties[刻印]">
+</p>

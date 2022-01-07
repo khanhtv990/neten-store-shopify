@@ -1,0 +1,59 @@
+{{ 'custom-form.css' | asset_url | stylesheet_tag }}
+
+<!-- 
+Formタイプに合わせ、以下を設定する。
+Form__Label
+Form__Input
+Form__Textarea
+
+-->
+<!-- カスタムフォーム -->
+<div class="custom-form">
+<!--フォームセクション  -->
+<div class="custom-form__section">
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">お名前※</label>
+  <input class="custom-form__item--half Form__Input" required type="text" name="properties[姓]" placeholder="例）山田" aria-label="姓" />
+  <input class="custom-form__item--half Form__Input" required type="text" name="properties[名]" placeholder="例）太郎" aria-label="名" />
+</div>
+  
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">お名前（本名）*</label>
+  <input class="custom-form__item--half Form__Input" required type="text" name="properties[姓]" placeholder="例）山田" aria-label="姓" />
+  <input class="custom-form__item--half Form__Input" required type="text" name="properties[名]" placeholder="例）太郎" aria-label="名" />
+</div>
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">ふりがな（ひらがな）*</label>
+  <input class="custom-form__item--half Form__Input" required type="text" pattern="[\u3041-\u3096ー]*" name="properties[ふりがな姓]" placeholder="例）やまだ" aria-label="姓" />
+  <input class="custom-form__item--half Form__Input" required type="text" pattern="[\u3041-\u3096ー]*" name="properties[ふりがな名]" placeholder="例）たろう" aria-label="名" />
+</div>
+
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">修理・点検希望の製品※</label>
+  <input class="Form__Input" required type="text" name="properties[修理・点検希望の製品]" placeholder="例）ロゴストロンL" aria-label="修理・点検希望の製品" />
+</div>
+
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">文章</label>
+  <textarea class="Form__Textarea" name="properties[文章]" required="required">{{ properties["文章"] }}</textarea>
+</div>
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">性別*</label>
+  <div class="cart-form__grid--align-left">
+      <input id="custom-form-radio1" required type="radio" name="properties[性別]" value="男性"> <label for="custom-form-radio1">男性</label>
+    <br>
+      <input id="custom-form-radio2" required type="radio" name="properties[性別]" value="女性"> <label for="custom-form-radio2">女性</label>
+    </div>
+</div>
+  
+<!--フォームセクション  -->
+<div class="custom-form__section">
+<div class="custom-form__title">タイトル</div>
+
+  
+</div> 
+</div>
+</div>

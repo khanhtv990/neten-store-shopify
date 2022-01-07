@@ -1,0 +1,6 @@
+development:
+  password: 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 
+  theme_id: 128759300281
+  store: neten-dev.myshopify.com
+  ignore_files:
+    - config/settings_data.json

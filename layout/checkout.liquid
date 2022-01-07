@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        .custom--newsletter-message {
+          margin-top: 13px;
+        }
+      </style>
+  </head>
+  <body>
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+    <script>
+      $( document ).ready(function() {
+          var thishtml = $('.logged-in-customer-newsletter').html();
+      // console.log(thishtml);
+      $('.section--shipping-address').append('<div class="custom--newsletter-message"></div>');
+      $('.custom--newsletter-message').append(thishtml);
+      $('.logged-in-customer-newsletter').remove();
+      const pay_method = $("form.edit_checkout input:hidden[name='previous_step']");
+      //お支払いページ
+      if (pay_method && pay_method.val() === "payment_method") {
+        pay_method.parent().before('<div style="padding: 10px; margin-top: 2em; border: 1px solid #FF0000;　"><h2 class="section__title" tabindex="-1"><font color="red"><b>【ご注意】</b></font></h2><p class="section__text"><font color="red"><b>お支払い方法によっては、配送先等の情報が書き換わる可能性がございます。<br> 必ず確認画面にてご確認をお願いいたします。<br> 確認画面の情報が発送伝票に反映されますので、予めご了承ください。</b></font><br></p></div>');
+      }
+      //住所ページ
+      // console.log("pay_method ::", pay_method.val());
+      if (pay_method && pay_method.val() === "contact_information") {
+        changePlaceholder();
+        $("select[name='checkout[shipping_address][id]']").on('change', function() {
+          setTimeout(() => {
+            changePlaceholder();
+            
+          }, 10);
+        })
+      }
+
+      if(Shopify.Checkout.step == "payment_method"){
+        if(localStorage.getItem("checkbox_invoice") && localStorage.getItem("checkbox_invoice") == "true"){
+          $(".step__footer")
+                        .append(`<input type="hidden" name="checkout[attributes][CHECKBOX_INVOICE]" value="${localStorage.getItem("checkbox_invoice")}">`);
+        }
+        if(localStorage.getItem("customer_invoice") && localStorage.getItem("customer_invoice") != ''){
+          $(".step__footer")
+                        .append(`<input type="hidden" name="checkout[attributes][CUSTOMER_INVOICE]" value="${localStorage.getItem("customer_invoice")}">`);
+        }
+      }
+
+      if(Shopify.Checkout.step == "thank_you"){
+        if(localStorage.getItem("checkbox_invoice")){
+            localStorage.removeItem("checkbox_invoice");
+        }
+        if(localStorage.getItem("customer_invoice")){
+          localStorage.removeItem("customer_invoice");
+        }
+      }
+
+      });
+      
+      const changePlaceholder = function() {
+        $("input[name='checkout[shipping_address][last_name]']").attr("placeholder", "姓（例：山田）");
+        $("input[name='checkout[shipping_address][first_name]']").attr("placeholder", "名（例：太郎）");
+        $("input[name='checkout[shipping_address][city]']").attr("placeholder", "市区町村（例：甲府市）");
+        $("input[name='checkout[shipping_address][address1]']").attr("placeholder", "住所（例：里吉4-6-5）");
+        $("input[name='checkout[shipping_address][address2]']").attr("placeholder", "建物名、部屋番号など（例：フトマニマンション 101）");
+      }
+ 
+    </script>
+  </body>
+</html>

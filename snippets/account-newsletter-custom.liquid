@@ -1,0 +1,39 @@
+<div class="account--newsletter-container" style="display:none; height: 0;">
+    <div class="account--newsletter-content">
+        {%- assign newsletter_id = 'footer-' | append: section.id -%}
+        {%- form 'customer', id: newsletter_id, class: 'Newsletter Form' -%}
+        {%- if form.posted_successfully? -%}
+            <p class="Form__Alert Alert Alert--success">{{ 'home_page.newsletter.success' | t }}</p>
+        {%- else -%}
+            {%- if form.errors -%}
+                <p class="Form__Alert Alert Alert--error">{{ form.errors.messages['email'] }}</p>
+            {%- endif -%}
+
+            <div class="Newsletter__Inner">
+                <input type="hidden" name="contact[tags]" value="newsletter">
+                <input type="email" name="contact[email]" class="Form__Input" aria-label="{{ 'home_page.newsletter.input' | t }}" placeholder="{{ 'home_page.newsletter.input' | t }}" value="{{customer.email}}" required>
+                <button type="submit" class="Form__Submit Button Button--primary">{{ 'home_page.newsletter.submit' | t }}</button>
+            </div>
+        {%- endif -%}
+        {%- endform -%}
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $('.cm-customer__switch input').click(function(){
+       var status = $(this).is(':checked');
+        if(status) {
+            $(this).parent().find('.cm-customer__slider').html('購読済');
+            $(this).parent().find('.cm-customer__slider').removeClass('cm-customer__round2');
+            $(this).parent().find('.cm-customer__slider').addClass('cm-customer__round1');
+            $(this).prop('disabled', true);
+            $('.account--newsletter-content').find('button').trigger('click');
+        } else {
+            $(this).parent().find('.cm-customer__slider').html('未購読');
+            $(this).parent().find('.cm-customer__slider').removeClass('cm-customer__round1');
+            $(this).parent().find('.cm-customer__slider').addClass('cm-customer__round2');
+            $(this).prop('disabled', false);
+        }
+  });
+</script>

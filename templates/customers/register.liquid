@@ -1,0 +1,116 @@
+<section data-section-id="reset-password" data-section-type="reset-password">
+  <div class="Container">
+    <div class="PageContent PageContent--fitScreen PageContent--extraNarrow">
+      {%- form 'create_customer', name: 'create_customer', class: 'Form Form--spacingTight', id: 'create_customer' -%}
+        <header class="Form__Header">
+          <h1 class="Form__Title Heading u-h1">{{ 'customer.register.title' | t }}</h1>
+          <p class="Form__Legend">{{ 'customer.register.description' | t }}</p>
+        </header>
+
+        {%- if form.errors -%}
+          <div class="Form__Alert Alert Alert--error">
+            <ul class="Alert__ErrorList">
+              {%- for field in form.errors -%}
+                {%- if field == 'form' -%}
+                  <li class="Alert__ErrorItem">{{ form.errors.messages[field] }}</li>
+                {%- else -%}
+                  <li class="Alert__ErrorItem"><strong>{{ form.errors.translated_fields[field] }}</strong> {{ form.errors.messages[field] }}</li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+        <div class="Grid">
+          <div class="Grid__Cell Form__Label">※全て入力必須となっております。</div>
+
+          {%- if request.locale.iso_code == 'ja' -%}
+            <div class="Grid__Cell Form__Label">お名前※</div>
+            <div class="Grid__Cell 1/2 Form__Item">
+              <input required="required" type="text" class="Form__Input" name="customer[last_name]" aria-label="{{ 'customer.register.last_name' | t }}" placeholder="{{ 'customer.register.last_name' | t }}"　autofocus>
+              <label class="Form__FloatingLabel">{{ 'customer.register.last_name' | t }}</label>
+            </div>
+
+            <div class="Grid__Cell 1/2 Form__Item">
+              <input required="required" type="text" class="Form__Input" name="customer[first_name]" aria-label="{{ 'customer.register.first_name' | t }}" placeholder="{{ 'customer.register.first_name' | t }}" >
+              <label class="Form__FloatingLabel">{{ 'customer.register.first_name' | t }}</label>
+            </div>
+
+            <div class="Grid__Cell Form__Label">お名前(フリガナ)※</div>
+            <div class="Grid__Cell 1/2 Form__Item">
+              <input required="required" type="text" id="last_furigana" pattern="[\u30A1-\u30F6]*" class="Form__Input" name="customer[note][last_furigana]" aria-label="セイ" placeholder="セイ">
+              <label class="Form__FloatingLabel">セイ</label>
+            </div>
+
+            <div class="Grid__Cell 1/2 Form__Item">
+              <input required="required" type="text" id="first_furigana" pattern="[\u30A1-\u30F6]*" class="Form__Input" name="customer[note][first_furigana]" aria-label="メイ" placeholder="メイ" >
+              <label class="Form__FloatingLabel">メイ</label>
+            </div>
+
+
+          {%- else -%}
+            <div class="Grid__Cell Form__Label">お名前※</div>
+            <div class="Grid__Cell 1/2 Form__Item">
+              <input required="required" type="text" class="Form__Input" name="customer[first_name]" aria-label="{{ 'customer.register.first_name' | t }}" placeholder="{{ 'customer.register.first_name' | t }}" autofocus>
+              <label class="Form__FloatingLabel">{{ 'customer.register.first_name' | t }}</label>
+            </div>
+
+            <div class="Grid__Cell 1/2 Form__Item">
+              <input required="required" type="text" class="Form__Input" name="customer[last_name]" aria-label="{{ 'customer.register.last_name' | t }}" placeholder="{{ 'customer.register.last_name' | t }}">
+              <label class="Form__FloatingLabel">{{ 'customer.register.last_name' | t }}</label>
+            </div>
+
+            <div class="Grid__Cell Form__Label">お名前(フリガナ)※</div>
+            <div class="Grid__Cell 1/2 Form__Item">
+              <input required="required" id="last_furigana" type="text" class="Form__Input" name="customer[note][first_furigana]" aria-label="メイ" placeholder="メイ" >
+              <label class="Form__FloatingLabel">メイ</label>
+            </div>
+
+            <div class="Grid__Cell 1/2 Form__Item">
+              <input required="required" id="first_furigana" type="text" class="Form__Input" name="customer[note][last_furigana]" aria-label="セイ" placeholder="セイ">
+              <label class="Form__FloatingLabel">セイ</label>
+            </div>
+
+          {%- endif -%}
+
+          <div class="Grid__Cell Form__Label">登録販売店※</div>
+          <div class="Grid__Cell Form__Label" style="text-transform:none;">販売店とは、弊社製品をお客様へご提案・ご販売いただくパートナー企業さまです。</br>ご登録を希望する販売店がございましたら、「ｖ」をクリックしてお選びください。 既存会員の方は元々ご登録の販売店を選択するようにお願いいたします。ご希望がない場合は「neten」のままお進みください。</div>
+          <div class="Grid__Cell Select--primary">
+            <select required="required" class="Grid__Cell Form__Item" name="customer[note][agency_name]">
+				{% render 'neten-seller-list'%}
+            </select>
+          </div>
+
+          <div class="Grid__Cell Form__Label">メールアドレス※</div>
+          <div class="Grid__Cell Form__Item">
+            <input type="email" class="Form__Input" id="email" name="customer[email]" aria-label="{{ 'customer.register.email' | t }}" placeholder="{{ 'customer.register.email' | t }}" required="required">
+            <label class="Form__FloatingLabel">{{ 'customer.register.email' | t }}</label>
+          </div>
+          <div class="Grid__Cell Form__Label">
+            <small>
+              ※各携帯電話会社が提供するメールアドレス（Docomo,au,ソフトバンクなど）は、セキュリティ設定の兼ね合いで、「弊社からのメールが届かない」というお声を、一部のユーザー様から頂いております。
+              <br>PC用メールアドレスをお持ちの場合は、そのアドレスでのご登録を推奨しております。
+            </small><br />
+          </div>
+          <div class="Grid__Cell Form__Label">希望するパスワード※</div>
+          <div class="Grid__Cell Form__Item">
+            <input type="password" class="Form__Input" name="customer[password]" aria-label="{{ 'customer.register.password' | t }}" placeholder="{{ 'customer.register.password' | t }}" required="required">
+            <label class="Form__FloatingLabel">{{ 'customer.register.password' | t }}</label>
+          </div>
+          <div class="Grid__Cell Form__Label"><small>半角英数字5文字以上でお願いします。（記号可）<br></small></div>
+
+          <div class="Grid__Cell Form__Label"></div>
+          <div class="Grid Grid__Cell Form__Item">
+            <input required="required" type="checkbox" style="margin-right: 0.2em;" class="" name="customer[note][terms_of_use]" value="Yes">
+            <label><span class="Rte"><a href="https://store.neten.jp/pages/terms" target="_blank" rel="noopener noreferrer">利用規約</a>に同意する</span></label>
+          </div>
+          
+          <div class="Grid__Cell Form__Label" style="text-transform:none;font-weight:bold;">【メールマガジンのご登録について】<br/>下記登録ボタンをクリック後に送信されます2通のメールのうち、「『neten store』メールマガジンのご案内」というメール内の「メルマガ配信を希望します」のボタンを押していただくことで、neten storeメールマガジンのご登録が完了いたします。
+          </div>
+        </div>
+
+
+        <button type="submit" class="Form__Submit Button Button--primary Button--full">{{ 'customer.register.submit' | t }}</button>
+      {%- endform -%}
+    </div>
+  </div>
+</section>

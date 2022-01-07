@@ -1,0 +1,27 @@
+{{ 'custom-form.css' | asset_url | stylesheet_tag }}
+
+<!-- 
+Formタイプに合わせ、以下を設定する。
+Form__Label
+Form__Input
+Form__Textarea
+
+-->
+<!-- カスタムフォーム -->
+<div class="custom-form">
+<!--フォームセクション  -->
+<div class="custom-form__section">
+<div class="custom-form__group">
+   <p>
+    「圀手會国際委員会」会員証に記載する氏名をご入力ください。<br>
+     <span style="color: red; font-size: em; font-weight: bold;">※こちらでご入力いただいたお名前のご変更はお受けできかねます。正確にご入力いただけますようお願いいたします。</span><br>
+  </p>
+  <label class="custom-form__label Form__Label">会員証用氏名*</label>
+  <input class="custom-form__item--half Form__Input" required type="text" name="properties[会員証用姓]" placeholder="例）山田" aria-label="会員証用姓" />
+  <input class="custom-form__item--half Form__Input" required type="text" name="properties[会員証用名]" placeholder="例）太郎" aria-label="会員証用名" />
+</div>
+
+  
+</div> 
+</div>
+

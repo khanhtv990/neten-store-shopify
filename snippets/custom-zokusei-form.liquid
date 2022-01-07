@@ -1,0 +1,48 @@
+{{ 'custom-form.css' | asset_url | stylesheet_tag }}
+<!-- 
+Formタイプに合わせ、以下を設定する。
+Form__Label
+Form__Input
+Form__Textarea
+
+-->
+<!-- カスタムフォーム -->
+<div class="custom-form">
+<!--フォームセクション  -->
+<div class="custom-form__section">
+  
+  
+  <div class="custom-form__group">
+    <label class="custom-form__label Form__Label">ご登録状況(複数選択可）*</label>
+  <div class="grid__item cart-form__grid--align-left">
+    <div class="grid__item">
+      <input type="hidden" name="properties[白川一般会員]" value="No">
+      <input type="checkbox" id="zokusei1" name="properties[白川一般会員]" value="Yes">
+      <label for="zokusei1">白川一般会員</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[白川修習会員(七種修習以上)]" value="No">
+      <input type="checkbox" id="zokusei2" name="properties[白川修習会員(七種修習以上)]" value="Yes">
+      <label for="zokusei2">白川修習会員(七種修習以上)</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[圀手會]" value="No">
+      <input type="checkbox" id="zokusei3" name="properties[圀手會]" value="Yes">
+      <label for="zokusei3">圀手會</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[圀手會国際委員会]" value="No">
+      <input type="checkbox" id="zokusei4" name="properties[圀手會国際委員会]" value="Yes">
+      <label for="zokusei4">圀手會国際委員会</label>
+    </div>
+     <div class="grid__item">
+      <input type="hidden" name="properties[メルマガ会員]" value="No">
+      <input type="checkbox" id="zokusei5" name="properties[メルマガ会員]" value="Yes">
+      <label for="zokusei5">メルマガ会員（上記のいずれかに該当の方はチェック不要）</label>
+    </div>
+  </div>
+  </div>
+  
+  
+</div>
+</div>

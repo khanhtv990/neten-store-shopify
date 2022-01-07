@@ -1,0 +1,446 @@
+<style>
+  .custom-page-header__table {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    max-width: 700px;
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  .custom-page-header__table th {
+    padding: 8px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    background-color: #f0f0f0;
+    font-weight: normal;
+    text-align: center !important;
+  }
+
+  .custom-page-header__table td {
+    padding: 2%;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 0.5em;
+  }
+
+  .custom-page-header__table tr td:nth-of-type(1) {
+    max-width: 100%;
+    width: 12em;
+  }
+
+  .custom-page-header__table tr td:nth-of-type(2) {
+    max-width: 100%;
+    width: 22em;
+  }
+
+  table.custom-page-header__table {
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+  
+  .custom-page-header__table label {
+    font-size: 0.8em;
+  }
+
+  .account-reseller__password {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, .4);
+  }
+
+  .account-reseller-content__password {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    padding-top: 40px;
+    border: 1px solid #888;
+    width: 480px;
+    max-width: calc(100vw - 40px);
+  }
+
+  .account-close__password {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: 700;
+    margin-right: -10px;
+    margin-top: -45px
+  }
+
+  .account-close__password:focus,
+  .account-close__password:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer
+  }
+  
+  /* for toggle button */
+  .cm-customer__switch {
+    position: relative;
+    display: inline-block;
+    width: 76px;
+    height: 26px;
+  }
+  .cm-customer__switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .cm-customer__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .cm-customer__slider:before {
+      position: absolute;
+      content: "";
+      height: 24px;
+      width: 24px;
+      left: 3px;
+      bottom: 1px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+  }
+  input:checked + .cm-customer__slider {
+/*     background-color: #299e14; */
+    background-color: #5c5c5c;
+    color: white;
+  }
+  input:focus + .cm-customer__slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  input:checked + .cm-customer__slider:before {
+    -webkit-transform: translateX(45px);
+    -ms-transform: translateX(45px);
+    transform: translateX(45px);
+  }
+  /* Rounded sliders */
+  .cm-customer__slider.cm-customer__round {
+    border-radius: 34px;
+    font-size: 12px;
+    line-height: 25px;
+   
+  }
+  .cm-customer__slider.cm-customer__round1 {
+    padding-left: 7px;
+  }
+  .cm-customer__slider.cm-customer__round2 {
+    text-align: right;
+    padding-right: 9px;
+  }
+  .cm-customer__slider.cm-customer__round:before {
+    border-radius: 50%;
+  }
+  /* end toggle button */  
+  
+</style>
+
+
+<div class="account-reseller__password reseller-ctrl">
+  <div class="account-reseller-content__password"><span class="account-close__password">&times;</span>
+    <div class="pw-input Grid">
+      <div class="Grid__Cell Form__Label">変更先の販売店を選択してください。</div>
+      <div class="Grid__Cell Select--primary">
+        <select required="required" class="Grid__Cell Form__Item account--reseller">
+
+          {% render 'neten-seller-list' selectedSeller: customer.metafields.cutom_attributes.agency_name, hasSeller: true %}
+        </select>
+      </div>
+
+      <div class="Grid__Cell Form__Label">販売店を変更するためには、アカウント登録時のパスワードが必要です。</div>
+      <div class="Grid__Cell Form__Item">
+        <input name="pw" type="password" class="Form__Input" placeholder="パスワード">
+        <button type="submit" class="Form__Submit Button Button--primary Button--full">送信</button>
+      </div>
+      
+    </div>
+    <div class="update-message"></div>
+  </div>
+</div>
+
+<div class="Container Container--narrow">
+  <header class="PageHeader">
+    <a href="{{ routes.account_logout_url }}" class="PageHeader__Back Heading Text--subdued Link Link--primary u-h7">{{
+      'customer.account.logout' | t }}</a>
+
+    <div class="SectionHeader">
+      <h1 class="SectionHeader__Heading Heading u-h1">{{ 'customer.account.title' | t }}</h1>
+      <div class="TableWrapper">
+        <table class="AccountTable custom-page-header__table">
+          <tr>
+            <td>お名前</td>
+            <td>{{ customer.last_name }} {{ customer.first_name }}</td>
+          </tr>
+          <tr>
+            <td>フリガナ</td>
+            <td>{{ customer.metafields.cutom_attributes.last_furigana }} {{
+              customer.metafields.cutom_attributes.first_furigana }}</td>
+          </tr>
+          <tr>
+            <td>メールアドレス</td>
+            <td>{{ customer.email }}</td>
+          </tr>
+          <tr>
+            <td>登録販売店</td>
+            <td>{{ customer.metafields.cutom_attributes.agency_name }}<br>
+              <label><span>変更をご希望の方は</span> <a href="#" class="Link--underline account--reseller--btn">こちら</a> </label>
+            </td>
+          </tr>
+          <tr>
+            <td>メールマガジンの購読</td>
+            <td>{% if customer.accepts_marketing == true %}
+              <label class="cm-customer__switch"> <input type="checkbox" checked disabled> <span class="cm-customer__slider cm-customer__round cm-customer__round1">購読済</span></label><br><label><span>解除をご希望の方は</span> <a href="https://s.neten.jp/Es4jW" class="Link Link--underline" target="_blank" rel="noopener noreferrer">こちら</a> </label>{% else %} <label class="cm-customer__switch"> <input type="checkbox"> <span class="cm-customer__slider cm-customer__round cm-customer__round2">未購読</span></label>{% endif %}
+            </td>
+            
+          </tr>
+        </table>
+      </div>
+    </div>
+  </header>
+  {% render 'account-newsletter-custom', customer:customer %}
+  <div class="PageLayout PageLayout--breakLap">
+    {%- comment -%}
+    --------------------------------------------------------------------------------------------------------------------
+    ORDER HISTORY
+    --------------------------------------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    <div class="PageLayout__Section">
+      {%- if customer.orders.size == 0 -%}
+      <div class="Segment">
+        <h2 class="Segment__Title Heading u-h7">{{ 'customer.account.no_orders_title' | t }}</h2>
+
+        <div class="Segment__Content">
+          <p>{{ 'customer.account.no_orders_content' | t }}</p>
+        </div>
+      </div>
+      {%- else -%}
+      {%- paginate customer.orders by 25 -%}
+      <div class="TableWrapper">
+        <table class="AccountTable Table Table--large">
+          <thead class="Text--subdued">
+            <tr>
+              <th>{{ 'customer.orders.order_number' | t }}</th>
+              <th>{{ 'customer.orders.date' | t }}</th>
+              <th>{{ 'customer.orders.payment_status' | t }}</th>
+              <th>{{ 'customer.orders.fulfillment_status' | t }}</th>
+              <th class="Text--alignRight">{{ 'customer.orders.total' | t }}</th>
+            </tr>
+          </thead>
+
+          <tbody class="Heading u-h7">
+            {%- for order in customer.orders -%}
+            <tr>
+              <td><a href="{{ order.customer_url }}" class="Link Link--underline">{{ order.name }}</a></td>
+              <td>{{ order.created_at | date: format: 'month_day_year' }}</td>
+              <td>{{ order.financial_status_label }}</td>
+              <td>{{ order.fulfillment_status_label }}</td>
+              <td class="Text--alignRight">{{ order.total_price | money_without_trailing_zeros }}</td>
+            </tr>
+            {%- endfor -%}
+          </tbody>
+        </table>
+      </div>
+
+      {%- render 'pagination', paginate: paginate -%}
+      {%- endpaginate -%}
+      {%- endif -%}
+    </div>
+
+    {%- comment -%}
+    --------------------------------------------------------------------------------------------------------------------
+    ADDRESS
+    --------------------------------------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    <div class="PageLayout__Section PageLayout__Section--secondary">
+      <div class="Segment">
+        {%- if customer.addresses_count == 0 -%}
+        <h2 class="Segment__Title Heading u-h7">{{ 'customer.account.no_addresses_title' | t }}</h2>
+
+        <div class="Segment__Content">
+          <p>{{ 'customer.account.no_addresses_content' | t }}</p>
+
+          <div class="Segment__ButtonWrapper">
+            <a href="{{ routes.account_addresses_url }}" class="Button Button--primary">{{
+              'customer.account.manage_addresses' | t }}</a>
+          </div>
+        </div>
+        {%- else -%}
+        <h2 class="Segment__Title Heading u-h7">{{ 'customer.account.default_address' | t }}</h2>
+
+        <div class="Segment__Content">
+          {{ customer.default_address | format_address | replace: '<p>', '
+          <p class="AccountAddress"><span>' | replace_first: '<br>', '</span><br>' }}
+          <div class="Segment__ButtonWrapper">
+            <a href="{{ routes.account_addresses_url }}" class="Button Button--primary">{{
+              'customer.account.edit_addresses' | t }}</a>
+          </div>
+        </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script>
+  $(function () {
+
+    $(".account--reseller--btn").on("click", () => {
+      $(".reseller-ctrl").css({
+        display: 'block',
+      });
+    })
+    
+    $('.account-reseller__password').click((e) => {
+      if ($(e.target).hasClass('account-reseller__password') || $(e.target).hasClass('account-close__password')) {
+        $(".reseller-ctrl").css({
+          display: 'none',
+        });
+      }
+    });
+    
+    $(".pw-input .Form__Item  .Form__Submit").on("click", () => {
+      $(".update-message").html("更新中...")
+      $(".pw-input").css({
+        display: 'none',
+      });
+    
+      $(".reseller-ctrl").css({
+        display: 'block',
+      });
+    
+    
+      const user = "{{ customer.email }}";
+      const pw = $("input[name='pw']").val();
+      updateProcess(user, pw)
+    })
+
+
+    function updateProcess(user, pw) {
+      const query = `
+mutation customerAccessTokenCreate($input: CustomerAccessTokenCreateInput!) {
+  customerAccessTokenCreate(input: $input) {
+    customerUserErrors {
+      code
+      field
+      message
+    }
+    customerAccessToken {
+      accessToken
+      expiresAt
+    }
+  }
+}
+`;
+      const varibles = {
+        "input": {
+          "email": user,
+          "password": pw
+        }
+      }
+
+      runGraphql(query, varibles)
+        .then(function (myJson) {
+          const tokenData = myJson.data.customerAccessTokenCreate.customerAccessToken;
+
+          if (tokenData) {
+            const token = tokenData.accessToken;
+
+            $.ajax({
+              type: 'POST',
+              data: JSON.stringify({
+                email: varibles.input.email,
+                token: token,
+                newMetafieldVal: $(".account--reseller").val()
+              }),
+              beforeSend: function(request) {
+                request.setRequestHeader("x-api-key", {% render "neten-conf" handle: "x-api-key", %});
+                                         },
+                url: {% render "neten-conf" handle: "api-gateway-url", %},
+                success: function (res) {                  
+                  if(!res.statusCode ||  res.statusCode!==200){
+                    console.error(res)
+                    $(".update-message").html("更新に失敗しました")
+                    return;
+                  }
+                  
+                  console.log(res)
+                  $(".update-message").html("更新に成功しました")
+                  $(".reseller-ctrl").css({
+                    display: 'block',
+                  });                  
+              },
+              error:function (error) {
+                $(".update-message").html("更新に失敗しました")
+                
+                $(".reseller-ctrl").css({
+                  display: 'block'
+                });
+                console.error(error)
+              }
+            })
+          } else {
+            
+            $(".update-message").html("パスワードが正しくありません")
+            $(".pw-input").css({
+              display: 'none',
+            });
+            $(".reseller-ctrl").css({
+              display: 'block',
+            });
+          }
+        $(".account-reseller__password, .account-close__password").on("click", () => location.reload())
+        })
+    }
+
+    function runGraphql(query, varibles) {
+      return new Promise((resolve, reject) => {    
+        const storefront_access_token = {% render "neten-conf" handle: "storefront_access_token", %}
+
+        const url = "/api/2021-07/graphql.json";
+        const opts = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-Shopify-Storefront-Access-Token": storefront_access_token
+          },
+          body: JSON.stringify({
+            query,
+            variables: varibles,
+          })
+        };
+
+        fetch(url, opts)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (myJson) {
+            resolve(myJson);
+          })
+          .catch(function (e) {
+            console.error(e)
+            reject(e)
+          });
+      });
+    }
+  });
+</script>

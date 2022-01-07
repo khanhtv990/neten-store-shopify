@@ -1,0 +1,60 @@
+{{ 'custom-form.css' | asset_url | stylesheet_tag }}
+
+<!-- 
+Formタイプに合わせ、以下を設定する。
+Form__Label
+Form__Input
+Form__Textarea
+
+-->
+<!-- カスタムフォーム -->
+<div class="custom-form">
+<!--フォームセクション  -->
+<div class="custom-form__section">
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">名札／席札に記載するお名前*</label>
+  <input class="custom-form__item--half Form__Input" required type="text" name="properties[姓]" placeholder="例）山田" aria-label="姓" />
+  <input class="custom-form__item--half Form__Input" required type="text" name="properties[名]" placeholder="例）太郎" aria-label="名" />
+</div>
+
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">1日目のお食事について</label>
+  <label class="custom-form__label--small Form__Label">食物アレルギーをお持ちの方、ベジタリアンの方はこちらにご記入ください。内容により対応できない場合もございますこと予めご了承ください。</label>
+  <input class="Form__Input" type="text" name="properties[アレルギー]" placeholder="" aria-label="アレルギー" />
+</div>
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">交通手段*</label>
+  <div class="cart-form__grid--align-left">
+      <input required type="radio" name="properties[交通手段]" value="車"> <label>車</label>
+    <br>
+      <input required type="radio" name="properties[交通手段]" value="公共交通機関"> <label>公共交通機関</label>
+    </div>
+</div>
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">お帰りのバスについて*</label>
+  <div class="cart-form__grid--align-left">
+      <input required type="radio" name="properties[バス]" value="1便"> <label>1便目：宇治山田駅14:15解散(予定)</label>
+    <br>
+      <input required type="radio" name="properties[バス]" value="2便"> <label>2便目：宇治山田駅15:15解散(予定)</label>
+    <br>
+      <input required type="radio" name="properties[バス]" value="不要（現地解散）"> <label>不要（現地解散）</label>
+    </div>
+</div>
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">お一人様でのご宿泊/アップグレード*</label>
+  <label class="custom-form__label--small Form__Label">宿泊あり以外のプランの方は、「希望しない」にチェックをしてください。</label>
+  <div class="cart-form__grid--align-left">
+      <input required type="radio" name="properties[一人部屋]" value="希望しない"> <label>希望しない</label>
+    <br>
+      <input required type="radio" name="properties[一人部屋]" value="希望する"> <label>希望する（別途追加料）</label>
+    <br>
+  <label class="custom-form__label--small Form__Label">※お申込み後「kokusai@kokushukai.jp」までお問い合わせください。</label>
+  <label class="custom-form__label--small Form__Label">空室状況により対応できない場合がございますこと予めご了承ください。</label>
+    </div>
+</div>
+  
+</div>
+</div>

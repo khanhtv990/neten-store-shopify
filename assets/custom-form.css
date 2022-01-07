@@ -1,0 +1,75 @@
+<style>
+  .custom-form{
+    margin-top:3rem;
+  }
+  
+/*  flexスタイルのgroup  */
+  .custom-form__group{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom:2rem;
+  }
+  .custom-form input {
+  	margin-bottom: 1rem;  
+  }
+
+  .custom-form__section{
+    margin-bottom:3rem;
+  }
+  
+  .custom-form__block{
+    margin-bottom:2rem;
+  }
+  
+  .custom-form__block p {
+    margin-bottom:0.5rem;
+  }
+  
+  .custom-form__text--hightlight{
+    font-weight:800;
+    color: red;
+  }
+  
+  .custom-form__text--small{
+    font-size:0.9em;
+  }
+  
+  .custom-form__title{
+    font-size:1.2em;
+    font-weight:800;
+    margin-bottom:1rem;
+  }
+  
+  .custom-form__title--sub{
+    font-size:1.2em;
+    font-weight:800;
+    margin-bottom:1rem;
+  }
+  
+
+  .custom-form__item--half.custom-form__item--half{
+    width:100%;
+  }
+  
+  @media only screen and (min-width: 750px) {
+    /* inputを横に並べるため。
+  	.custom-form__groupなどと組み合わせる */
+	.custom-form__item--half.custom-form__item--half{
+       width: 47%;
+    }
+  }
+  
+  .custom-form__label{
+    width:100%;
+    font-size:1em;
+    font-weight:800;
+    text-transform:none;
+  }
+  
+  .custom-form__label--small{
+    width:100%;
+    text-transform:none;
+  }
+  
+</style> 

@@ -1,0 +1,35 @@
+{{ 'custom-form.css' | asset_url | stylesheet_tag }}
+
+<!-- 
+Formタイプに合わせ、以下を設定する。
+Form__Label
+Form__Input
+Form__Textarea
+
+-->
+<!-- カスタムフォーム -->
+<div class="custom-form">
+<div class="custom-form__block">
+  <p class="custom-form__title">
+    ＜大型機発信について>
+  </p>
+  <p>
+    今回のイベント専用の特別構文にご参加者様のお名前を入れて、弊グループのロゴストロン機（最高機種を含む)より発信をさせていただきます。<span style="color: red; font-weight: bold;"> (申込数1に対して1名様分の氏名)</span>
+  </p>
+  <p class="custom-form__text">
+    発信するお名前を姓名別々にひらがなでご入力ください。
+  </p>
+  <p class="custom-form__text--small">
+    ※ひらがな以外（記号・スペースなど）はご入力できませんのでご注意ください。
+  </p>
+</div> 
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">
+    構文発信用のお名前ふりがな（ひらがな）*
+  </label>
+  <input class="custom-form__item--half Form__Input" required type="text" pattern="[\u3041-\u3096ー]*" name="properties[ふりがな姓]" placeholder="例）やまだ" aria-label="姓" />
+  <input class="custom-form__item--half Form__Input" required type="text" pattern="[\u3041-\u3096ー]*" name="properties[ふりがな名]" placeholder="例）たろう" aria-label="名" />
+</div>
+  
+</div> 

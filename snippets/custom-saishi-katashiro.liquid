@@ -1,0 +1,91 @@
+{{ 'custom-form.css' | asset_url | stylesheet_tag }}
+
+<!-- 
+Formタイプに合わせ、以下を設定する。
+Form__Label
+Form__Input
+Form__Textarea
+
+-->
+<!-- カスタムフォーム -->
+<div class="custom-form">
+<!--フォームセクション  -->
+<div class="custom-form__section">
+<div class="custom-form__block">
+  <p class="custom-form__title">
+    ＜大型機発信について>
+  </p>
+  <p>
+    今回のイベント専用の特別構文にご参加者様のお名前を入れて、弊グループのロゴストロン機（最高機種を含む)より発信をさせていただきます。<span style="color: red; font-weight: bold;"> (申込数1に対して1名様分の氏名)</span>
+  </p>
+  <p class="custom-form__text">
+    <strong>発信するお名前を姓名別々にひらがなでご入力ください。</strong>
+  </p>
+  <p class="custom-form__text--small">
+    ※ひらがな以外（記号・スペースなど）はご入力できませんのでご注意ください。
+  </p>
+</div>
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">ふりがな（ひらがな）*</label>
+  <input class="custom-form__item--half Form__Input" required type="text" pattern="[\u3041-\u3096ー]*" name="properties[ふりがな姓]" placeholder="例）やまだ" aria-label="姓" />
+  <input class="custom-form__item--half Form__Input" required type="text" pattern="[\u3041-\u3096ー]*" name="properties[ふりがな名]" placeholder="例）たろう" aria-label="名" />
+</div>
+	
+<div class="custom-form__block">
+  <p class="custom-form__title">
+    ＜形代発信について＞
+  </p>
+  <p>
+    形代をご使用される方のお名前を入れた構文を弊社グループ、ロゴストロンの最高機種を含むインフラより発信させていただきます。<span style="color: red; font-weight: bold;"> (形代ご購入数1に対して1名様分の氏名)</span>
+  </p>
+  <p class="custom-form__text">
+    <strong>発信するお名前（フルネーム）をひらがなでご入力ください。</strong>
+  </p>
+  <p class="custom-form__text--small">
+    ※ひらがな以外（記号・スペースなど）はご入力できませんのでご注意ください。
+  </p>
+</div>
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">1体目の形代をご使用される方のお名前<span style="color: red; font-weight: bold;">（祭祀参加ご本人様）</span></label>
+  <input class="Form__Input" type="text" pattern="[\u3041-\u3096ー]*" name="properties[形代1]" placeholder="ひらがなでご記入ください" aria-label="形代1" />
+</div>
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">2体目の形代をご使用される方のお名前</label>
+  <input class="Form__Input" type="text" pattern="[\u3041-\u3096ー]*" name="properties[形代2]" placeholder="ひらがなでご記入ください" aria-label="形代2" />
+</div>
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">3体目の形代をご使用される方のお名前</label>
+  <input class="Form__Input" type="text" pattern="[\u3041-\u3096ー]*" name="properties[形代3]" placeholder="ひらがなでご記入ください" aria-label="形代3" />
+</div>
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">4体目の形代をご使用される方のお名前</label>
+  <input class="Form__Input" type="text" pattern="[\u3041-\u3096ー]*" name="properties[形代4]" placeholder="ひらがなでご記入ください" aria-label="形代4" />
+</div>
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">5体目の形代をご使用される方のお名前</label>
+  <input class="Form__Input" type="text" pattern="[\u3041-\u3096ー]*" name="properties[形代5]" placeholder="ひらがなでご記入ください" aria-label="形代5" />
+</div>
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">6体目の形代をご使用される方のお名前</label>
+  <input class="Form__Input" type="text" pattern="[\u3041-\u3096ー]*" name="properties[形代6]" placeholder="ひらがなでご記入ください" aria-label="形代6" />
+</div>
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">7体目の形代をご使用される方のお名前</label>
+  <input class="Form__Input" type="text" pattern="[\u3041-\u3096ー]*" name="properties[形代7]" placeholder="ひらがなでご記入ください" aria-label="形代7" />
+</div>
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">8体目の形代をご使用される方のお名前</label>
+  <input class="Form__Input" type="text" pattern="[\u3041-\u3096ー]*" name="properties[形代8]" placeholder="ひらがなでご記入ください" aria-label="形代8" />
+</div>
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">9体目の形代をご使用される方のお名前</label>
+  <input class="Form__Input" type="text" pattern="[\u3041-\u3096ー]*" name="properties[形代9]" placeholder="ひらがなでご記入ください" aria-label="形代9" />
+</div>
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">10体目の形代をご使用される方のお名前</label>
+  <input class="Form__Input" type="text" pattern="[\u3041-\u3096ー]*" name="properties[形代10]" placeholder="ひらがなでご記入ください" aria-label="形代10" />
+</div>
+
+</div>
+</div>
+

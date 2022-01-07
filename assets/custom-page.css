@@ -1,0 +1,3606 @@
+
+body.LC_Page_Index {
+	z-index: 9999!important;
+}
+#modal-content {
+	z-index: 9999!important;	
+}
+
+/**------------------------------------------
+ ■ ︎ h1
+------------------------------------------**/
+.h1_description {
+  font-size: 22px;
+}
+
+/**------------------------------------------
+ ■ ︎ ブロック
+------------------------------------------**/
+.seminar-wrap, .product-wrap {
+  font-size: 17px;
+  line-height: 1.8;
+}
+.block {
+	padding: 20px 0 50px;
+}
+@media screen and (min-width: 700px) {
+	.block {
+		padding: 20px 30px 50px 30px;
+	}
+}
+.block02 {
+	padding: 20px 0 50px;
+}
+
+/**------------------------------------------
+ ■ ︎ タイトル
+------------------------------------------**/
+h2.logostudy, h2.product {
+	position: relative;
+	padding: .75em 1em;
+	background-color: #79A9D2;
+	color: #fff;
+	font-size: 140%;
+	margin-bottom: 40px;
+	line-height: 1.5;
+}
+h2.logostudy::before, h2.product::before,
+h2.logostudy::after, h2.product::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	border-style: solid;
+	border-color: transparent;
+}
+h2.logostudy::before, h2.product::before {
+	left: 0;
+	border-width: 0 15px 15px 0;
+	border-right-color: #226BA9;
+}
+h2.logostudy::after, h2.product::after {
+	right: 0;
+	border-style: solid;
+	border-width: 15px 15px 0 0;
+	border-top-color: #226BA9;
+}
+h2.ls-h2 {
+	background: #024160;
+	text-align: center;
+	font-size: 130%;
+	padding: 20px 20px;
+	color: #fff;
+	margin-bottom: 30px;
+	font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+h3.logostudy, h3.product {
+	position: relative;
+	padding-top: .75em;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+}
+h3.logostudy::after, h3.product::after {
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	z-index: 2;
+	content: '';
+	width: 20%;
+	height: 3px;
+	background-color: #333;
+}
+h3.caution, h4.product {
+	padding: .5em .75em;
+	background-color: #f6f6f6;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 15px;
+}
+
+h3.product02 {
+	position: relative;
+	padding: 1em 0;
+	text-align: center;
+	margin-bottom: 20px;
+}
+h3.product02::before,
+h3.product02::after {
+	position: absolute;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 6px;
+	box-sizing: border-box;
+}
+h3.product02::before {
+	top: 0;
+	border-top: 2px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+h3.product02::after {
+	bottom: 0;
+	border-top: 1px solid #ccc;
+	border-bottom: 2px solid #ccc;
+}
+
+@media screen and (max-width: 700px) {
+	h2.logostudy::before,
+	h2.logostudy::after
+	 {
+		border:none;
+		top:0;
+		left:0;
+		right:0;
+		position: relative;
+		background: none;
+	}
+	h2.logostudy {
+		height: auto;
+		font-size: 100%;
+		line-height: 1.5;
+		padding: 10px;
+	}
+}
+
+@media screen and (min-width:961px) {
+/*pc用のcssを記述*/
+.fulltext{
+	text-align:center;
+	vertical-align: middle;
+	letter-spacing: 2px;
+	font-size: 2.0em;
+	font-weight:bold;
+	margin : 20px 0px 20px 0px ;
+	padding : 20px ;
+	display:block;
+	background:#f4f4f4;
+	line-height: 40px;
+	border-radius: 5px;
+	}
+}
+@media only screen and (min-width:376px) and (max-width:960px) {
+/*tablet用のcssを記述*/
+.fulltext{
+	text-align:center;
+	vertical-align: middle;
+	letter-spacing: 2px;
+	font-size: 1.7em;
+	font-weight:bold;
+	margin : 20px 0px 20px 0px ;
+	padding : 20px ;
+	display:block;
+	background:#f4f4f4;
+	line-height: 40px;
+	border-radius: 5px;
+	}
+}
+@media screen and ( max-width:375px ) {
+/*スマホ用のcssを記述*/
+.fulltext{
+	text-align:center;
+	vertical-align: middle;
+	letter-spacing: 2px;
+	font-size: 1.4em;
+	font-weight:bold;
+	margin : 20px 0px 20px 0px ;
+	padding : 20px ;
+	display:block;
+	background:#f4f4f4;
+	line-height: 30px;
+	border-radius: 5px;
+	}
+}
+/**------------------------------------------
+ ■ ︎ ロゴシスト認定講座　テーブル
+------------------------------------------**/
+.curriculum-table th.table-title {
+	background: #01325c;
+	color: #fff;
+	font-size: 150%;
+	text-align: center;
+}
+.curriculum-table th {
+	text-align: center;
+}
+
+/**  ティーチャーテーブル  **/
+table.teacher-table th {
+	width: 40%;
+	text-align: center;
+}
+
+/**  スケジュールテーブル  **/
+table.schedule-table th {
+	text-align: center;
+}
+/**  料金テーブル  **/
+table.price-table th {
+	width: 40%;
+	text-align: center;
+}
+table.price-table td {
+	text-align: center;
+}
+.profile-table th {
+	text-align: center;
+	font-size: 140%;
+}
+
+/**------------------------------------------
+ ■ ︎ アメノシズク　テーブル
+------------------------------------------**/
+/**  各ツールの違い  **/
+table.model-table {
+}
+table.model-table th {
+	text-align: center;
+}
+table.model-table th:nth-child(2), table.model-table th:nth-child(3), table.model-table th:nth-child(4), table.model-table th:nth-child(5) {
+	width: 15%;
+}
+table.model-table tr:nth-child(6) td {
+	background: #C8E6F3;
+}
+table.model-table td:first-child {
+	width: 30%;
+}
+
+/**  アメノシズク石一覧テーブル  **/
+table.a-type-table th {
+	text-align: center;
+	background: #ED9801;
+	font-weight: bold;
+}
+table.a-type-table th.j-name {
+	width: 40%;
+}
+table.a-type-table th.type-photo {
+	width: 15%;
+}
+table.a-type-table th.type-price {
+	width: 15%;	
+}
+table.a-type-table td.type-name {
+	background: #ffe8c1;
+}
+@media screen and (max-width: 700px) {
+	table.a-type-table td {
+		font-size: 80%;
+		line-height: 1.4;
+	}
+	table.a-type-table td.price {
+		font-size: 60%;
+		padding: 0 5px;
+	}
+}
+/**  アメノシズクオプションテーブル  **/
+table.a-option-table th {
+	width: 25%;
+}
+table.a-option-table td {
+	width: 25%;
+}
+table.a-option-table tr:first-child td {
+	text-align: center;
+}
+table.a-option-table tr:nth-child(2) td:nth-child(3) {
+	text-align: center;
+}
+
+/**  アメノシズク価格テーブル  **/
+table.a-price-table th {
+	text-align: center;
+}
+table.a-price-table tr:first-child th:first-child {
+	width: 34%;
+}
+table.a-price-table tr:first-child th:nth-child(2) {
+	width: 44%;
+}
+table.a-price-table tr:first-child th:nth-child(3) {
+	width: 22%;
+}
+table.a-price-table tr:nth-child(2) th:nth-child(2) {
+	width: 22%;
+}
+table.a-price-table td:nth-child(2), table.a-price-table td:nth-child(3), table.a-price-table td:nth-child(4) {
+	text-align: right;
+}
+/**------------------------------------------
+ ■ ︎ Mシステムプラン　テーブル
+------------------------------------------**/
+table.mplan-table th {
+	width: 40%;
+	text-align: center;
+}
+table.mplan-table td {
+}
+
+/**------------------------------------------
+ ■ ︎ ロゴストロンL　テーブル
+------------------------------------------**/
+table.l-plan-table tbody:hover {
+	background: #fffbf0;
+}
+table.l-plan-table tbody:hover tr td:first-child, table.l-plan-table tbody:hover:nth-child(2) tr:first-child td:nth-child(2) {
+	background: #ffedbd;
+}
+table.l-plan-table tbody:first-child:hover {
+
+	background: none;
+}
+table.l-plan-table th {
+	text-align: center;
+	background: none;
+}
+table.l-plan-table th:first-child {
+	background: #F0F0F0;
+}
+table.l-plan-table tr td:first-child, table.l-plan-table tbody:nth-child(2) tr:first-child td:nth-child(2) {
+	font-weight: bold;
+	background: #F0F0F0;
+}
+table.l-plan-table td {
+	font-size: 80%;
+}
+table.l-plan-table th.standard-th, table.l-plan-table th.light-th, table.l-plan-table th.premium-th {
+	width: 30%;
+}
+
+/**------------------------------------------
+ ■ ︎ ロゴフェス　テーブル
+------------------------------------------**/
+table.logofes-plan {
+	border: none;
+}
+table.logofes-plan th, table.logofes-plan td {
+	border-top: dashed #ccc 1px;
+	border-right: none;
+	border-bottom: dashed #ccc 1px;
+	border-top: none;
+	text-align: center;
+}
+table.logofes-plan th:first-child, table.logofes-plan td:first-child {
+	border-right: dashed #ccc 1px;
+	text-align: center;
+	width: 50%;
+}
+
+/**------------------------------------------
+ ■ ︎ テーブル　共通
+------------------------------------------**/
+@media screen and (min-width: 800px) {
+	.curriculum-table, .teacher-table, .schedule-table, .price-table {
+		margin: 0 auo;
+		width: 80%;
+	}
+}
+
+/**------------------------------------------
+ ■ ︎ ボタン　共通
+
+
+
+
+
+
+
+
+
+------------------------------------------**/
+/**  ボタン  **/
+a.button {
+	display: block;
+	width: 60%;
+	margin: 15px auto;
+	padding: 20px 10px;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	background: #cd2424;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	font-size: 130%;
+}
+a.button:hover {
+	background: #810d0d;
+	transition: 0.8s ;
+	color: #fff;
+}
+a.button2 {
+	display: block;
+
+	width: 60%;
+	margin: 15px auto;
+	padding: 20px 10px;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	background: #3498DB;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	font-size: 130%;
+}
+a.button2:hover {
+	background: #085e98;
+	transition: 0.8s ;
+	color: #fff;
+
+}
+@media screen and (max-width: 600px) {
+	a.button, a.button2 {
+		width: 90%;
+		font-size: 100%;
+	}
+}
+/**  商品一覧ボタン  **/
+a.button_buy {
+  display: table;
+  margin: 30px auto;
+  padding: 15px 60px;
+  background: #2fa1d2;
+  border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.0;
+}
+a.button_buy:hover {
+  opacity: .5;
+  transition: 0.8s ;
+  color: #fff;
+}
+
+/**  今すぐ購入するボタン  **/
+a.button_buy2 {
+  display: table;
+  margin: 30px auto;
+  padding: 15px 60px;
+  background: #cd2424;
+  border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: center;
+}
+a.button_buy2:hover {
+  background: #810d0d;
+  transition: 1.0s ;
+  color: #fff;
+}
+
+/**  購入ボタン ロゴL以降  **/
+a.button_buy3 {
+	position: relative;
+	border-radius: 4px;
+	color: #fff;
+	line-height: 1.5;
+	-webkit-transition: none;
+	transition: none;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	display: table;
+	font-weight: bold;
+	padding: 15px 50px!important;
+	text-align: center;
+	font-size: 20px;
+	margin: 0 auto;
+}
+a.button_buy3:hover {
+   opacity: .5;
+   transition: 0.8s ;
+   color: #fff;;
+
+
+}
+a.button_buy3:active {
+	top: 3px;
+	box-shadow: none;
+}
+a.utton_buy3.green {
+	background-color: #1abc9c;
+	box-shadow: 0 3px 0 #0e8c73;
+}
+a.button_buy3.orange {
+	background-color: #ff9a09;
+	box-shadow: 0 3px 0 #d47d00;
+}
+a.button_buy3.blue {
+	background-color: #01C1C1;
+	box-shadow: 0 3px 0 #02B2B2;
+}
+@media screen and (max-width: 500px) {
+	a.button_buy3 {
+		width: 60%;
+	}
+}
+
+/**  購入ボタン 統一 20170825  **/
+a.button_buy4 {
+  display: table;
+  margin: 10px auto;
+  padding: 15px 60px;
+  background: #4A88EE;
+  border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  box-shadow: 0 3px 0 #3A71CA;
+}
+@media screen and (max-width: 500px) {
+a.button_buy4 {
+		width: 70%;
+	  padding: 15px 30px;
+	}
+}
+a.button_buy4:hover {
+        opacity: 0.5;
+        transition: 0.8s;
+}
+
+/**  長文用ボタン 統一 20171023 **/
+a.button_text {
+  display: table;
+  margin: 10px auto;
+  padding: 10px 30px;
+  background: #4A88EE;
+  border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+  float: left;
+}
+a.button_text:hover {
+        opacity: 0.5;
+        transition: 0.8s;
+}
+
+/**------------------------------------------
+■ ︎ 統一 並行ボタン
+------------------------------------------**/
+ul.2button-box li {
+	display: block;
+	width: 48%;
+	float: left;
+}
+ul.2button-box li:first-child {
+	margin-right: 4%;
+}
+@media screen and (max-width: 780px) {
+	ul.2button-box li {
+		width: 100%;
+		clear: both;
+	}
+	ul.2button-box li:first-child {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+}
+a.button_2button {
+	position: relative;
+	border-radius: 4px;
+	color: #fff;
+	line-height: 1.5;
+	-webkit-transition: none;
+	transition: none;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	display: block;
+	font-weight: bold;
+	padding: 15px 0;
+
+	text-align: center;
+	font-size: 20px;
+}
+a.button_2button.right {
+	background-color: #759ae4;
+	box-shadow: 0 3px 0 #4975c6;
+}
+a.button_2button.left {
+	background-color: #1b59b5;
+	box-shadow: 0 3px 0 #0d3d9a;	
+}
+a.button_2button span {
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+a.button_2button:hover {
+	 opacity: .5;
+         transition: 0.8s ;
+　　　　color: #fff;
+         box-shadow: 0 3px 0 #000080;
+}
+a.button_2button.right:hover {
+	box-shadow: 0 3px 0 #4975c6;
+}
+a.button_2button.left:hover {
+	box-shadow: 0 3px 0  #0d3d9a;
+}
+a.button_2button:active {
+	top: 3px;
+	box-shadow: 0 3px 0 none;
+}
+
+/**------------------------------------------
+ ■ ︎ ロゴストロンL　ボタン
+------------------------------------------**/
+ul.lplan-box li {
+	display: block;
+	width: 48%;
+	float: left;
+}
+ul.lplan-box li:first-child {
+	margin-right: 4%;
+}
+@media screen and (max-width: 780px) {
+	ul.lplan-box li {
+		width: 100%;
+		clear: both;
+	}
+	ul.lplan-box li:first-child {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+}
+a.button_lplan {
+	position: relative;
+	border-radius: 4px;
+	color: #fff;
+	line-height: 1.5;
+	-webkit-transition: none;
+	transition: none;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	display: block;
+	font-weight: bold;
+	padding: 15px 0;
+	text-align: center;
+	font-size: 20px;
+}
+a.button_lplan.light {
+	background-color: #759ae4;
+	box-shadow: 0 3px 0 #4975c6;
+}
+a.button_lplan.standard {
+	background-color: #1b59b5;
+	box-shadow: 0 3px 0 #0d3d9a;	
+}
+a.button_lplan span {
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+a.button_lplan:hover {
+	 opacity: .5;
+         transition: 0.8s ;
+　　　　color: #fff;
+         box-shadow: 0 3px 0 #000080;
+}
+a.button_lplan.light:hover {
+	box-shadow: 0 3px 0 #4975c6;
+}
+a.button_lplan.standard:hover {
+	box-shadow: 0 3px 0  #0d3d9a;
+}
+a.button_lplan:active {
+	top: 3px;
+	box-shadow: 0 3px 0  #000080;
+}
+
+/**------------------------------------------
+ ■ ︎ アメノシズク　ボタン
+------------------------------------------**/
+a.button_price {
+	font-size: 80%;
+	background: #d30000;
+	color: #fff;
+	display: block;
+	border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px;
+	padding: 6px 1px;
+	text-align: center;
+	line-height: 1.2;
+}
+a.button_price:hover {
+　opacity: .8;
+  transition: 0.8s ;
+　color: #fff;
+}
+@media screen and (max-width: 700px) {
+	a.button_price {
+		font-size: 7px;
+	}
+}
+
+/**------------------------------------------
+ ■ ︎ ロゴスタディベーシック　ボタン
+------------------------------------------**/
+a.voice_button {
+	display: table;
+	margin: 0 auto;
+	padding: 10px 30px;
+	width: 50%;
+	text-align: center;
+	border: dashed #3498DB 2px;
+}
+a.voice_button:hover {
+	background: #3498DB;
+	color: #fff;
+}
+@media screen and (max-width: 700px) {
+	a.voice_button {
+		width: 80%;
+		}
+}
+/**------------------------------------------
+ ■ ︎ ハフリⅡ　ボタン
+------------------------------------------**/
+ul.hafuri-box li {
+	display: block;
+	width: 48%;
+	float: left;
+}
+ul.hafuri-box li:first-child {
+	margin-right: 4%;
+}
+@media screen and (max-width: 780px) {
+	ul.hafuri-box li {
+		width: 100%;
+		clear: both;
+	}
+	ul.hafuri-box li:first-child {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+}
+a.button_hafuri {
+	position: relative;
+	border-radius: 4px;
+	color: #fff;
+	line-height: 1.5;
+	-webkit-transition: none;
+	transition: none;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	display: block;
+	font-weight: bold;
+	padding: 15px 0;
+	text-align: center;
+	font-size: 20px;
+}
+a.button_hafuri.hisui {
+	background-color: #4EBAD0;
+	box-shadow: 0 3px 0 #399AB2;
+}
+a.button_hafuri.touka {
+	background-color: #EE69DF;
+	box-shadow: 0 3px 0 #D054C2;	
+}
+a.button_hafuri span {
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+a.button_hafuri:hover {
+	top: -4px;
+	color: #fff;
+}
+a.button_hafuri.hisui:hover {
+	box-shadow: 0 3px 0 #399AB2;
+}
+a.button_hafuri.touka:hover {
+	box-shadow: 0 3px 0 #D054C2;
+}
+a.button_hafuri:active {
+	top: 3px;
+	box-shadow: none;
+}
+/**------------------------------------------
+ ■ ︎ Nigi　ボタン
+------------------------------------------**/
+ul.nigi-box li {
+	display: block;
+	width: 48%;
+	float: left;
+}
+ul.nigi-box li:first-child {
+	margin-right: 4%;
+}
+@media screen and (max-width: 780px) {
+	ul.nigi-box li {
+		width: 100%;
+		clear: both;
+	}
+	ul.nigi-box li:first-child {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+}
+a.button_nigi {
+	position: relative;
+	border-radius: 4px;
+	color: #fff;
+	line-height: 1.5;
+	-webkit-transition: none;
+	transition: none;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	display: block;
+	font-weight: bold;
+	padding: 15px 0;
+	text-align: center;
+	font-size: 20px;
+}
+a.button_nigi.normal {
+	background-color: #4A88EE;
+	box-shadow: 0 3px 0 #3A71CA;
+}
+a.button_nigi.izanigi {
+	background-color: #F56CD5;
+	box-shadow: 0 3px 0 #DA5BBC;	
+}
+a.button_nigi span {
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+a.button_nigi:hover {
+	top: -4px;
+	color: #fff;
+}
+a.button_nigi.normal:hover {
+	box-shadow: 0 3px 0 #3A71CA;
+}
+a.button_nigi.izanigi:hover {
+	box-shadow: 0 3px 0 #DA5BBC;
+}
+a.button_nigi:active {
+	top: 3px;
+	box-shadow: none;
+}
+/**------------------------------------------
+ ■ ︎ 囲み・装飾
+------------------------------------------**/
+.info01 {
+	background :#fff2d2;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	padding: 15px;
+	text-align: center;
+	border: solid #ffd879 1px;
+}
+.info01 h3, .info01-2 h3 {
+	font-size: 120%;
+	border-bottom: solid #ffd879 2px;
+	padding-bottom: 6px;
+	margin-bottom: 8px;
+	text-align: center;
+}
+.info01-2 {
+	background :#fff2d2;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	padding: 20px;
+	border: solid #ffd879 1px;
+}
+
+.info02 {
+	background :#e2f2ff;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	padding: 15px;
+	text-align: center;
+	border: solid #95d1ff 1px;
+	font-weight: bold;
+	
+}
+.info02 h3 {
+	font-size: 120%;
+	border-bottom: solid #95d1ff 2px;
+	padding-bottom: 6px;
+	margin-bottom: 8px;
+	
+}
+.info02-2 {
+	background :#e2f2ff;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	padding: 15px;
+	border: solid #95d1ff 1px;
+	font-weight: bold;
+}
+.info03 {
+	background: #f4f4f4;
+	padding: 30px;
+	margin-bottom: 30px;
+}
+.info04 {
+	background: #f0eee4;
+	padding: 30px;
+	margin-bottom: 30px;
+}
+.info05 {
+	background :#f9eaea;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	padding: 15px;
+	border: solid #e6a9a9 1px;
+	font-weight: bold;
+	color: #5b0000;
+}
+
+
+.lpbox {
+    margin: 0 auto;
+    background: #ffe6e6;
+	max-width: 1000px;
+	text-align:left;
+}
+.lpbox .box-title {
+    font-size: 1.2em;
+    background: #e35f5f;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.lpbox p {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+.lpbox2 {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #e35f5f;
+	max-width: 1000px;
+}
+.lpbox2 .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -27px;
+    left: -3px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    font-size: 17px;
+    background: #e35f5f;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+.lpbox2 p {
+    margin: 0; 
+    padding: 0;
+}
+
+/**------------------------------------------
+ ■ ︎ ロゴサウンド　囲み・装飾
+------------------------------------------**/
+/**  ロゴサウンド　トップ説明  **/
+.info06 {
+	background: #000;
+	padding: 30px;
+	color: #fff;
+}
+/**  ロゴサウンド　からだで感じる  **/
+.info07 {
+	background: #e5ecef;
+	padding: 30px;
+}
+/**  ロゴサウンド　使用方法  **/
+.info08 {
+	background: #fcf8ed;
+	padding: 30px;
+}
+/**  ロゴサウンド　CD説明　囲み  **/
+.note {
+  font-size: 16px;
+  color: #222;
+  padding:2rem;
+  background-color: #c3c3c3;
+  background-image: linear-gradient( rgba(255,255,255,.3) .1em, transparent .1em );
+  background-size: auto 2rem;
+  line-height: 2rem;
+  overflow: hidden;
+}
+.note > p { margin: 0 0 0rem; }
+.note > p:first-letter { margin-left: 1rem; }
+/**  ロゴサウンド　フキダシ  **/
+
+/**  ロゴサウンド　CD内容　囲み  **/
+.logobox {
+    margin: 2em 0;
+    background: #dcefff;
+}
+.logobox .box-title {
+    font-size: 1.2em;
+    background: #5fb3f5;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.logobox p {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+/**------------------------------------------
+ ■ ︎ D子コラム　囲み・装飾
+------------------------------------------**/
+.d-column {
+	background: #ffd49c;
+	margin: 0;
+	padding: 1px 20px 30px 20px;
+}
+.d-column-contents {
+	background: #fff;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	padding: 20px;
+	margin: 20px 10px 0 10px;
+}
+@media screen and (max-width: 500px) {
+	.d-column {
+		padding: 1px 8px 20px 8px;
+	}
+}
+
+/**------------------------------------------
+ ■ ︎ アメノシズク　体験談　囲み・装飾
+------------------------------------------**/
+.a_taiken {
+	background: url(../img/product/a_stripe.png) repeat;
+	padding: 30px 30px 1px 30px;
+}
+.a_taiken div.taiken_content {
+	background: #fff;
+	padding: 30px;
+	margin-bottom: 30px;
+	font-size: 110%;
+	line-height: 1.5;
+}
+.a_taiken div.taiken_content h3.product02 {
+	position: relative;
+	padding: .5em .75em;
+	background-color: #fff;
+	border: 2px solid #ff8a00;
+	border-radius: 6px;
+	font-size: 20px;
+}
+.a_taiken div.taiken_content h3.product02::before,
+.a_taiken div.taiken_content h3.product02::after {
+	position: absolute;
+	top: 100%;
+	left: 30px;
+	content: '';
+	height: 0;
+	width: 0;
+	border: 10px solid transparent;
+}
+.a_taiken div.taiken_content h3.product02::before {
+	border-top: 15px solid #ff8a00;
+}
+.a_taiken div.taiken_content h3.product02::after {
+	margin-top: -4px;
+	border-top: 15px solid #fff;
+}
+@media screen and (max-width: 700px) {
+	.a_taiken {
+		padding: 10px 10px 1px 10px;
+	}
+	.a_taiken div.taiken_content {
+		padding: 10px;
+	}
+}
+/**------------------------------------------
+ ■ ︎ ロゴスタディベーシックお客様の声　囲み・装飾
+------------------------------------------**/
+div.seminar-voioce {
+	padding-top: 20px;
+	margin-bottom: 30px;
+}
+div.seminar-voioce h4 {
+	position: relative;
+	padding: .5em .75em;
+	background-color: #fff;
+	border: 2px solid #666;
+	border-radius: 6px;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+div.seminar-voioce h4::before,
+div.seminar-voioce h4::after {
+	position: absolute;
+	top: 100%;
+	left: 30px;
+	content: '';
+	height: 0;
+	width: 0;
+	border: 10px solid transparent;
+}
+div.seminar-voioce h4::before {
+	border-top: 15px solid #666;
+}
+div.seminar-voioce h4::after {
+	margin-top: -4px;
+	border-top: 15px solid #fff;
+}
+
+/**------------------------------------------
+ ■ ︎ ロゴストロンL　囲み・装飾
+------------------------------------------**/
+span.underline01 {
+	font-weight: bold;
+	background: linear-gradient(transparent 60%, #ffff66 60%);
+}
+
+/**------------------------------------------
+ ■ ︎ ロゴフェス　囲み・装飾
+------------------------------------------**/
+
+div.benefits.pink {
+	margin-bottom: 50px;
+	padding: 20px 40px;
+	background: #fff;
+	border-right: #f4438e solid 10px;
+	border-left: #f4438e solid 10px;
+	border-bottom: #f4438e solid 10px;
+}
+div.benefits.green {
+	margin-bottom: 50px;
+	padding: 20px 40px;
+	background: #fff;
+	border-right: #91c231 solid 10px;
+	border-left: #91c231 solid 10px;
+	border-bottom: #91c231 solid 10px;
+}
+
+div.benefits p {
+}
+/**------------------------------------------
+ ■ ︎ リスト　共通
+------------------------------------------**/
+/**  リスト --　丸やじるし  **/
+ul.list01 li {
+	position: relative;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: dashed 1px #ccc;
+	padding-left: 2em;
+}
+ul.list01 li::after,
+ul.list01 li::before {
+	display: block;
+	content: '';
+	position: absolute;
+}
+ul.list01 li::after {
+	top: .35em;
+	left: 0;
+	width: 14px;
+	height: 14px;
+	background-color: #3498db;
+	border-radius: 100%;
+}
+ul.list01 li::before {
+	z-index: 2;
+	top: .625em;
+	left: .225em;
+	width: 4px;
+	height: 4px;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+ul.list02 li {
+	position: relative;
+}
+ul.list02 li::after,
+ul.list02 li::before {
+	display: block;
+	content: '';
+	position: absolute;
+}
+ul.list02 li::after {
+	top: 9px;
+	left: -1em;
+	width: 6px;
+	height: 6px;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+ul.list02 li::before {
+	top: 12px;
+	left: -1.025em;
+	width: 8px;
+	height: 1px;
+	background-color: #666;
+}
+
+/**  リスト --　プレッド  **/
+ul.list03 {
+	margin: 30px 0;
+}
+
+ul.list03 li {
+	position: relative;
+	padding-left: 25px;
+	margin-bottom: 7px;
+}
+ul.list03 li::after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: .7em;
+	left: 0;
+	width: 12px;
+	height: 4px;
+	border-left: 3px solid #3498db;
+	border-bottom: 3px solid #3498db;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+/**  リスト --　プレッド（backgroundあり）  **/
+ul.list04 {
+	margin: 30px 0 0;
+}
+
+ul.list04 li {
+	position: relative;
+	padding: 5px 10px 5px 40px;
+	margin-bottom: 7px;
+	font-weight: bold;
+	background: #f4f4f4;
+}
+ul.list04 li::after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: .9em;
+	left: 1em;
+	width: 12px;
+	height: 4px;
+	border-left: 3px solid #3498db;
+	border-bottom: 3px solid #3498db;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+/**  リスト --　吹き出し  **/
+ul.list05 li {
+	position: relative;
+	padding: .5em .75em;
+	background-color: #f0f0f0;
+	border-radius: 6px;
+	margin-bottom: 30px;
+}
+ul.list05 li::after {
+	position: absolute;
+	top: 100%;
+	left: 30px;
+	content: '';
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top: 15px solid #f0f0f0;
+}
+/**  LP用リスト --　プレッド  **/
+.list_title {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #3498db;
+}
+ul.list06 {
+	margin: 10px 0;
+	padding-left: 1em;
+	font-weight:bold;
+}
+
+ul.list06 li {
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 7px;
+	font-size: 1.2em; 
+}
+ul.list06 li::after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: .7em;
+	left: 0;
+	width: 12px;
+	height: 4px;
+	border-left: 3px solid #3498db;
+	border-bottom: 3px solid #3498db;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+/**------------------------------------------
+ ■ ︎ その他
+------------------------------------------**/
+.img-center {
+	display: table;
+	margin: 30px auto 30px;
+}
+.img-circle {
+	border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;
+}
+.img-kadomaru {
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+}
+.float-right {
+	float: right;
+}
+.float-left {
+	float: left;
+}
+.text-b {
+	font-weight: bold;
+	font-size: 110%;
+}
+.text-center {
+	text-align: center;
+}
+.text-line {
+	text-decoration: underline;
+}
+.width100 {
+	width: 100%;
+	height: auto;
+}
+.width90 {
+	width: 90%;
+	height: auto;
+}
+.width80 {
+	width: 80%;
+	height: auto;
+}
+.width70 {
+	width: 70%;
+	height: auto;
+}
+.width60 {
+	width: 60%;
+	height: auto;
+}
+.width50 {
+	width: 50%;
+	height: auto;
+}
+.width40 {
+	width: 40%;
+	height: auto;
+}
+.width30 {
+	width: 30%;
+	height: auto;
+}
+.width20 {
+	width: 20%;
+	height: auto;
+}
+.width10 {
+	width: 10%;
+	height: auto;
+}
+
+.padding-l {
+	padding-left: 20px;
+}
+@media screen and (max-width: 700px) {
+	.width90, .width80, .width70, .width60, .width50, .width40, .width30, .width20, .width10 {
+		width: 100%;
+	}
+	.padding-l {
+		padding-left: 0;
+	}
+	.img-circle {
+		width: 80%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.float-right {
+		clear: both
+	}
+}
+.float-left {
+	float: left;
+}
+.margin-l {
+	margin: 0 30px 10px 0;
+}
+.float-right {
+	float: right;
+}
+.margin-r {
+	margin: 0 0 10px 30px;
+}
+.cf:before,
+.cf:after {
+
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+
+img.no-spacing{
+	vertical-align: bottom;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 100%; /*20170824*/
+}
+a.underline {
+	text-decoration: underline;
+}
+a.underline:hover {
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+	.float-left, .float-right {
+		float: none;
+	}
+	.margin-r, .margin-l {
+		margin: 0 0 30px 0;
+	}
+	.trimming {
+		position:relative;
+		border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;
+		display: block;
+		margin: 0 auto 40px auto;
+		width: 250px;
+		height: 250px;
+		overflow: hidden;
+		text-align: center;
+	}
+	.trimming img {
+		position:absolute;
+		top:-140px;
+		left:0px;
+	}
+	.trimming2 {
+		position:relative;
+		border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;
+		display: block;
+		margin: 0 auto 40px auto;
+		width: 250px;
+		height: 250px;
+		overflow: hidden;
+		text-align: center;
+	}
+	.trimming2 img {
+		position:absolute;
+		top:-80px;
+		left:0px;
+	}
+	.notrimming {
+		position:relative;
+		display: block;
+		margin: 0 auto 40px auto;
+		text-align: center;
+	}
+}
+
+/**------------------------------------------
+ ■ ︎ Youtube
+------------------------------------------**/
+.youtube {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.youtube iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/**------------------------------------------
+ ■ ︎ vimeo
+------------------------------------------**/
+div.embed-vimeo {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  padding-top: 56.25%;
+}
+ 
+div.embed-vimeo iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/**------------------------------------------
+ ■ ︎ コンテンツ下商品一覧
+------------------------------------------**/
+.product-list-box {
+	width: 33%;
+
+	display: inline-block;
+}
+
+@media screen and (max-width: 780px) {
+	.product-list-box {
+		width: 100%;
+		display: block;
+		margin-bottom: 30px;
+	}
+	.product-list-box .listphoto {
+		display: inline-block;
+		width: 40%;
+	}
+	.product-list-box .listphoto img {
+		width: 100%!important;
+	}
+}
+@media screen and (min-width: 780px) {
+	.oversea-width {
+		padding: 0 80px;
+	}
+}
+
+/**------------------------------------------
+ ■ ︎ D子インタビュー
+------------------------------------------**/
+.dko-interview {
+	padding: 20px;
+	margin: 20px 0px;
+	background: #f5f5f5;
+	border-radius: 10px;        /* CSS3草案 */  
+    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
+    -moz-border-radius: 10px;   /* Firefox用 */  
+}
+.dko-interview h3{
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.dko-interview a {
+    color: #34a1d2;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+.dko-interview .link-text {
+    margin: 3%;
+    width: 78%;
+}
+.dko-interview img {
+    width: 15%;
+}
+}
+
+/**------------------------------------------
+ ■ ︎ 最新情報ボックス（LOGOSOUNDサイト等）
+------------------------------------------**/
+.news-box {
+	float: left;
+}
+.news-box.box-l {
+	width: 32%;
+}
+.news-box.box-r {
+	width: 60%;
+	margin:0 4%;
+}
+.news-box a.button_text {
+    margin: 20px auto;
+}
+@media screen and (max-width: 600px) {
+.news-box {
+	float: none;
+}
+.news-box.box-l {
+	width: 100%;
+}
+.news-box.box-r {
+	width: 100%;
+	margin:20px auto;
+}
+.news-box a.button_text {
+    width: 80%;
+    text-align: center;
+    display: block;
+    float: none;
+}
+}
+
+/**------------------------------------------
+ ■ ︎ 感想
+------------------------------------------**/
+.bar1 {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #f7f7f7;
+  border: 0;
+}
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  @charset "utf-8";
+
+/************************************************
+ ポップアップウィンドウ
+************************************************ */
+/* 共通
+----------------------------------------------- */
+div#windowcolumn {
+    height: 100%;
+    margin: 15px 15px 0 15px;
+    background: #fff;
+}
+
+div#windowcolumn h2 {
+    background-color: #131304;  color: #fff;  padding: 1% 2%;
+    margin-bottom: 2%;
+    font-size: 170%;
+}
+
+div#window_area {
+    margin: 15px auto 0 auto;
+    padding-bottom: 20px;
+    min-height: 300px;
+    height: auto !important;
+}
+
+div#window_area p.information {
+    margin-bottom: 20px;
+}
+
+div#window_area .message {
+    margin-bottom: 20px;
+    color: #f60;
+    line-height: 150%;
+    font-weight: bold;
+    font-size: 140%;
+}
+div#window_area table {
+/*    width: 540px;*/
+    width: 100%;
+}
+
+/* お客様の声の書き込み、新しいお届け先の追加・変更
+----------------------------------------------- */
+div#window_area #forgot {
+    margin: 0 auto;
+    padding: 20px;
+    width: 80%;
+    border: 1px solid #ccc;
+}
+div#window_area #forgot .mailaddres {
+    margin-bottom: 10px;
+}
+
+div#window_area #forgot p {
+    text-align: left;
+    margin-bottom: 10px;
+}
+div#window_area #forgot .contents{
+
+}
+
+/* 商品詳細拡大写真、カート拡大写真
+----------------------------------------------- */
+div#bigimage,
+div#cartimage {
+    margin-top: 15px;
+    background-color: #fff;
+    text-align: center;
+}
+
+div#bigimage img,
+div#cartimage img {
+    padding: 10px;
+    background-color: #fff;
+}
+
+/* 郵便番号検索
+----------------------------------------------- */
+div#zipsearchcolumn {
+    margin: 15px auto 0 auto;
+    border-top: 5px solid #ffa85c;
+    border-bottom: 5px solid #ffa85c;
+    width: 460px;
+    background-color: #fff;
+}
+
+div#zipsearchcolumn h2 {
+    margin: 0 0 15px 0;
+    width: 460px;
+}
+
+div#zipsearch_area {
+    margin: 15px auto 0 auto;
+    width: 460px;
+}
+
+div#zipsearchcolumn .btn {
+    margin: 15px 0 30px 0;
+    text-align: center;
+}
+
+div#zipsearch_area #completebox p {
+    padding: 60px 5px;
+    text-align: center;
+}
+
+#window_area .btn_area {
+    width:50%;
+    margin: 5% auto 0;
+}
+
+
+
+.btnStyle03 i,
+.btnStyle05 i {
+	margin: 0 5px 0 0;
+}
+.btnStyle03 i.rsp {
+	margin: 0 0 0 5px;
+}
+.btnStyle03 {
+	display: block;
+	width: 100%;
+	color: #FFF !important;
+	font-size: 120%;
+	background-color: #4A88EE !important;
+	border: none;
+	outline: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 15px 0;
+	cursor: pointer;
+	text-decoration: none !important;
+	margin: 0;
+}
+.btnStyle03d {
+	display: block;
+	width: 100%;
+	color: #FFF !important;
+	font-size: 120%;
+	background-color: #999 !important;
+	border: none;
+	outline: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 15px 0;
+	cursor: pointer;
+	text-decoration: none !important;
+	margin: 0;
+}
+.btnStyle03 i {
+	font-size: 120%;
+}
+.btnStyle03:hover {
+	opacity: 0.5;
+	transition: 0.8s ;
+}
+
+.btnStyle05 {
+	display: block;
+	width: 100%;
+	color: #FFFFFF;
+	font-size: 120%;
+	background-color: #00008B;
+	border: none;
+	outline: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 15px 0;
+	cursor: pointer;
+	text-decoration: none !important;
+	margin: 0;
+}
+.btnStyle05 i {
+	color: #FFF !important;
+	font-size: 120%;
+}
+a.btnStyle06 {
+	display: block;
+	width: 50%;
+	color: #FFF !important;
+	font-size: 120%;
+	background-color: #4A88EE !important;
+	border: none;
+	outline: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 10px 10px;
+	cursor: pointer;
+	text-decoration: none !important;
+	margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+
+}
+a.btnStyle06:hover {
+	opacity: 0.5;
+	transition: 0.8s;
+}
+a.btnStyle07 {
+	display: block;
+	width: 50%;
+	color: #FFF !important;
+	font-size: 120%;
+	background-color: #4169E1;
+	border: none;
+	outline: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none !important;
+        margin-left: auto;
+       margin-right: auto;
+}
+a.btnStyle07:hover {
+  transition: 1.0s ;
+  color: #fff;
+
+}
+a.btnStyle08 {
+	display: block;
+	width: 90%;
+	color: #FFF !important;
+	font-size: 120%;
+	background-color: #4A88EE;
+	border: none;
+	outline: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 10px 10px;
+	cursor: pointer;
+	text-decoration: none !important;
+	margin: 0;
+}
+a.btnStyle08:hover {
+	opacity: 0.5;
+	transition: 0.8s;
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+/**  author: makino chigusa  **/
+
+/**------------------------------------------
+ ■ ︎ トップページ　販売店切り替えモダール
+------------------------------------------**/
+body.LC_Page_Index {
+	z-index: 9999!important;
+}
+#modal-content {
+	z-index: 9999!important;	
+}
+
+/**------------------------------------------
+ ■ ︎ h1
+------------------------------------------**/
+.h1_description {
+  font-size: 22px;
+}
+
+/**------------------------------------------
+ ■ ︎ ブロック
+------------------------------------------**/
+.seminar-wrap, .product-wrap {
+  font-size: 17px;
+  line-height: 1.8;
+}
+.block {
+	padding: 20px 0 50px;
+}
+@media screen and (min-width: 700px) {
+	.block {
+		padding: 20px 30px 50px 30px;
+	}
+}
+.block02 {
+	padding: 20px 0 50px;
+}
+
+/**------------------------------------------
+ ■ ︎ タイトル
+------------------------------------------**/
+h2.logostudy, h2.product {
+	position: relative;
+	padding: .75em 1em;
+	background-color: #79A9D2;
+	color: #fff;
+	font-size: 140%;
+	margin-bottom: 40px;
+	line-height: 1.5;
+}
+h2.logostudy::before, h2.product::before,
+h2.logostudy::after, h2.product::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	border-style: solid;
+	border-color: transparent;
+}
+h2.logostudy::before, h2.product::before {
+	left: 0;
+	border-width: 0 15px 15px 0;
+	border-right-color: #226BA9;
+}
+h2.logostudy::after, h2.product::after {
+	right: 0;
+	border-style: solid;
+	border-width: 15px 15px 0 0;
+	border-top-color: #226BA9;
+}
+h2.ls-h2 {
+	background: #024160;
+	text-align: center;
+	font-size: 130%;
+	padding: 20px 20px;
+	color: #fff;
+	margin-bottom: 30px;
+	font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+h3.logostudy, h3.product {
+	position: relative;
+	padding-top: .75em;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+}
+h3.logostudy::after, h3.product::after {
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	z-index: 2;
+	content: '';
+	width: 20%;
+	height: 3px;
+	background-color: #333;
+}
+h3.caution, h4.product {
+	padding: .5em .75em;
+	background-color: #f6f6f6;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 15px;
+}
+
+h3.product02 {
+	position: relative;
+	padding: 1em 0;
+	text-align: center;
+	margin-bottom: 20px;
+}
+h3.product02::before,
+h3.product02::after {
+	position: absolute;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 6px;
+	box-sizing: border-box;
+}
+h3.product02::before {
+	top: 0;
+	border-top: 2px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+h3.product02::after {
+	bottom: 0;
+	border-top: 1px solid #ccc;
+	border-bottom: 2px solid #ccc;
+}
+
+@media screen and (max-width: 700px) {
+	h2.logostudy::before,
+	h2.logostudy::after
+	 {
+		border:none;
+		top:0;
+		left:0;
+		right:0;
+		position: relative;
+		background: none;
+	}
+	h2.logostudy {
+		height: auto;
+		font-size: 100%;
+		line-height: 1.5;
+		padding: 10px;
+	}
+}
+
+@media screen and (min-width:961px) {
+/*pc用のcssを記述*/
+.fulltext{
+	text-align:center;
+	vertical-align: middle;
+	letter-spacing: 2px;
+	font-size: 2.0em;
+	font-weight:bold;
+	margin : 20px 0px 20px 0px ;
+	padding : 20px ;
+	display:block;
+	background:#f4f4f4;
+	line-height: 40px;
+	border-radius: 5px;
+	}
+}
+@media only screen and (min-width:376px) and (max-width:960px) {
+/*tablet用のcssを記述*/
+.fulltext{
+	text-align:center;
+	vertical-align: middle;
+	letter-spacing: 2px;
+	font-size: 1.7em;
+	font-weight:bold;
+	margin : 20px 0px 20px 0px ;
+	padding : 20px ;
+	display:block;
+	background:#f4f4f4;
+	line-height: 40px;
+	border-radius: 5px;
+	}
+}
+@media screen and ( max-width:375px ) {
+/*スマホ用のcssを記述*/
+.fulltext{
+	text-align:center;
+	vertical-align: middle;
+	letter-spacing: 2px;
+	font-size: 1.4em;
+	font-weight:bold;
+	margin : 20px 0px 20px 0px ;
+	padding : 20px ;
+	display:block;
+	background:#f4f4f4;
+	line-height: 30px;
+	border-radius: 5px;
+	}
+}
+/**------------------------------------------
+ ■ ︎ ロゴシスト認定講座　テーブル
+------------------------------------------**/
+.curriculum-table th.table-title {
+	background: #01325c;
+	color: #fff;
+	font-size: 150%;
+	text-align: center;
+}
+.curriculum-table th {
+	text-align: center;
+}
+
+/**  ティーチャーテーブル  **/
+table.teacher-table th {
+	width: 40%;
+	text-align: center;
+}
+
+/**  スケジュールテーブル  **/
+table.schedule-table th {
+	text-align: center;
+}
+/**  料金テーブル  **/
+table.price-table th {
+	width: 40%;
+	text-align: center;
+}
+table.price-table td {
+	text-align: center;
+}
+.profile-table th {
+	text-align: center;
+	font-size: 140%;
+}
+
+/**------------------------------------------
+ ■ ︎ アメノシズク　テーブル
+------------------------------------------**/
+/**  各ツールの違い  **/
+table.model-table {
+}
+table.model-table th {
+	text-align: center;
+}
+table.model-table th:nth-child(2), table.model-table th:nth-child(3), table.model-table th:nth-child(4), table.model-table th:nth-child(5) {
+	width: 15%;
+}
+table.model-table tr:nth-child(6) td {
+	background: #C8E6F3;
+}
+table.model-table td:first-child {
+	width: 30%;
+}
+
+/**  アメノシズク石一覧テーブル  **/
+table.a-type-table th {
+	text-align: center;
+	background: #ED9801;
+	font-weight: bold;
+}
+table.a-type-table th.j-name {
+	width: 40%;
+}
+table.a-type-table th.type-photo {
+	width: 15%;
+}
+table.a-type-table th.type-price {
+	width: 15%;	
+}
+table.a-type-table td.type-name {
+	background: #ffe8c1;
+}
+@media screen and (max-width: 700px) {
+	table.a-type-table td {
+		font-size: 80%;
+		line-height: 1.4;
+	}
+	table.a-type-table td.price {
+		font-size: 60%;
+		padding: 0 5px;
+	}
+}
+/**  アメノシズクオプションテーブル  **/
+table.a-option-table th {
+	width: 25%;
+}
+table.a-option-table td {
+	width: 25%;
+}
+table.a-option-table tr:first-child td {
+	text-align: center;
+}
+table.a-option-table tr:nth-child(2) td:nth-child(3) {
+	text-align: center;
+}
+
+/**  アメノシズク価格テーブル  **/
+table.a-price-table th {
+	text-align: center;
+}
+table.a-price-table tr:first-child th:first-child {
+	width: 34%;
+}
+table.a-price-table tr:first-child th:nth-child(2) {
+	width: 44%;
+}
+table.a-price-table tr:first-child th:nth-child(3) {
+	width: 22%;
+}
+table.a-price-table tr:nth-child(2) th:nth-child(2) {
+	width: 22%;
+}
+table.a-price-table td:nth-child(2), table.a-price-table td:nth-child(3), table.a-price-table td:nth-child(4) {
+	text-align: right;
+}
+/**------------------------------------------
+ ■ ︎ Mシステムプラン　テーブル
+------------------------------------------**/
+table.mplan-table th {
+	width: 40%;
+	text-align: center;
+}
+table.mplan-table td {
+}
+
+/**------------------------------------------
+ ■ ︎ ロゴストロンL　テーブル
+------------------------------------------**/
+table.l-plan-table tbody:hover {
+	background: #fffbf0;
+}
+table.l-plan-table tbody:hover tr td:first-child, table.l-plan-table tbody:hover:nth-child(2) tr:first-child td:nth-child(2) {
+	background: #ffedbd;
+}
+table.l-plan-table tbody:first-child:hover {
+
+	background: none;
+}
+table.l-plan-table th {
+	text-align: center;
+	background: none;
+}
+table.l-plan-table th:first-child {
+	background: #F0F0F0;
+}
+table.l-plan-table tr td:first-child, table.l-plan-table tbody:nth-child(2) tr:first-child td:nth-child(2) {
+	font-weight: bold;
+	background: #F0F0F0;
+}
+table.l-plan-table td {
+	font-size: 80%;
+}
+table.l-plan-table th.standard-th, table.l-plan-table th.light-th, table.l-plan-table th.premium-th {
+	width: 30%;
+}
+
+/**------------------------------------------
+ ■ ︎ ロゴフェス　テーブル
+------------------------------------------**/
+table.logofes-plan {
+	border: none;
+}
+table.logofes-plan th, table.logofes-plan td {
+	border-top: dashed #ccc 1px;
+	border-right: none;
+	border-bottom: dashed #ccc 1px;
+	border-top: none;
+	text-align: center;
+}
+table.logofes-plan th:first-child, table.logofes-plan td:first-child {
+	border-right: dashed #ccc 1px;
+	text-align: center;
+	width: 50%;
+}
+
+/**------------------------------------------
+ ■ ︎ テーブル　共通
+------------------------------------------**/
+@media screen and (min-width: 800px) {
+	.curriculum-table, .teacher-table, .schedule-table, .price-table {
+		margin: 0 auo;
+		width: 80%;
+	}
+}
+
+/**------------------------------------------
+ ■ ︎ ボタン　共通
+
+
+
+
+
+
+
+
+
+------------------------------------------**/
+/**  ボタン  **/
+a.button {
+	display: block;
+	width: 60%;
+	margin: 15px auto;
+	padding: 20px 10px;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	background: #cd2424;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	font-size: 130%;
+}
+a.button:hover {
+	background: #810d0d;
+	transition: 0.8s ;
+	color: #fff;
+}
+a.button2 {
+	display: block;
+
+	width: 60%;
+	margin: 15px auto;
+	padding: 20px 10px;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	background: #3498DB;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	font-size: 130%;
+}
+a.button2:hover {
+	background: #085e98;
+	transition: 0.8s ;
+	color: #fff;
+
+}
+@media screen and (max-width: 600px) {
+	a.button, a.button2 {
+		width: 90%;
+		font-size: 100%;
+	}
+}
+/**  商品一覧ボタン  **/
+a.button_buy {
+  display: table;
+  margin: 30px auto;
+  padding: 15px 60px;
+  background: #2fa1d2;
+  border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.0;
+}
+a.button_buy:hover {
+  opacity: .5;
+  transition: 0.8s ;
+  color: #fff;
+}
+
+/**  今すぐ購入するボタン  **/
+a.button_buy2 {
+  display: table;
+  margin: 30px auto;
+  padding: 15px 60px;
+  background: #cd2424;
+  border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: center;
+}
+a.button_buy2:hover {
+  background: #810d0d;
+  transition: 1.0s ;
+  color: #fff;
+}
+
+/**  購入ボタン ロゴL以降  **/
+a.button_buy3 {
+	position: relative;
+	border-radius: 4px;
+	color: #fff;
+	line-height: 1.5;
+	-webkit-transition: none;
+	transition: none;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	display: table;
+	font-weight: bold;
+	padding: 15px 50px!important;
+	text-align: center;
+	font-size: 20px;
+	margin: 0 auto;
+}
+a.button_buy3:hover {
+   opacity: .5;
+   transition: 0.8s ;
+   color: #fff;;
+
+
+}
+a.button_buy3:active {
+	top: 3px;
+	box-shadow: none;
+}
+a.utton_buy3.green {
+	background-color: #1abc9c;
+	box-shadow: 0 3px 0 #0e8c73;
+}
+a.button_buy3.orange {
+	background-color: #ff9a09;
+	box-shadow: 0 3px 0 #d47d00;
+}
+a.button_buy3.blue {
+	background-color: #01C1C1;
+	box-shadow: 0 3px 0 #02B2B2;
+}
+@media screen and (max-width: 500px) {
+	a.button_buy3 {
+		width: 60%;
+	}
+}
+
+/**  購入ボタン 統一 20170825  **/
+a.button_buy4 {
+  display: table;
+  margin: 10px auto;
+  padding: 15px 60px;
+  background: #4A88EE;
+  border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  box-shadow: 0 3px 0 #3A71CA;
+}
+@media screen and (max-width: 500px) {
+a.button_buy4 {
+		width: 70%;
+	  padding: 15px 30px;
+	}
+}
+a.button_buy4:hover {
+        opacity: 0.5;
+        transition: 0.8s;
+}
+
+/**  長文用ボタン 統一 20171023 **/
+a.button_text {
+  display: table;
+  margin: 10px auto;
+  padding: 10px 30px;
+  background: #4A88EE;
+  border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+  float: left;
+}
+a.button_text:hover {
+        opacity: 0.5;
+        transition: 0.8s;
+}
+
+/**------------------------------------------
+■ ︎ 統一 並行ボタン
+------------------------------------------**/
+ul.2button-box li {
+	display: block;
+	width: 48%;
+	float: left;
+}
+ul.2button-box li:first-child {
+	margin-right: 4%;
+}
+@media screen and (max-width: 780px) {
+	ul.2button-box li {
+		width: 100%;
+		clear: both;
+	}
+	ul.2button-box li:first-child {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+}
+a.button_2button {
+	position: relative;
+	border-radius: 4px;
+	color: #fff;
+	line-height: 1.5;
+	-webkit-transition: none;
+	transition: none;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	display: block;
+	font-weight: bold;
+	padding: 15px 0;
+
+	text-align: center;
+	font-size: 20px;
+}
+a.button_2button.right {
+	background-color: #759ae4;
+	box-shadow: 0 3px 0 #4975c6;
+}
+a.button_2button.left {
+	background-color: #1b59b5;
+	box-shadow: 0 3px 0 #0d3d9a;	
+}
+a.button_2button span {
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+a.button_2button:hover {
+	 opacity: .5;
+         transition: 0.8s ;
+　　　　color: #fff;
+         box-shadow: 0 3px 0 #000080;
+}
+a.button_2button.right:hover {
+	box-shadow: 0 3px 0 #4975c6;
+}
+a.button_2button.left:hover {
+	box-shadow: 0 3px 0  #0d3d9a;
+}
+a.button_2button:active {
+	top: 3px;
+	box-shadow: 0 3px 0 none;
+}
+
+/**------------------------------------------
+ ■ ︎ ロゴストロンL　ボタン
+------------------------------------------**/
+ul.lplan-box li {
+	display: block;
+	width: 48%;
+	float: left;
+}
+ul.lplan-box li:first-child {
+	margin-right: 4%;
+}
+@media screen and (max-width: 780px) {
+	ul.lplan-box li {
+		width: 100%;
+		clear: both;
+	}
+	ul.lplan-box li:first-child {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+}
+a.button_lplan {
+	position: relative;
+	border-radius: 4px;
+	color: #fff;
+	line-height: 1.5;
+	-webkit-transition: none;
+	transition: none;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	display: block;
+	font-weight: bold;
+	padding: 15px 0;
+	text-align: center;
+	font-size: 20px;
+}
+a.button_lplan.light {
+	background-color: #759ae4;
+	box-shadow: 0 3px 0 #4975c6;
+}
+a.button_lplan.standard {
+	background-color: #1b59b5;
+	box-shadow: 0 3px 0 #0d3d9a;	
+}
+a.button_lplan span {
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+a.button_lplan:hover {
+	 opacity: .5;
+         transition: 0.8s ;
+　　　　color: #fff;
+         box-shadow: 0 3px 0 #000080;
+}
+a.button_lplan.light:hover {
+	box-shadow: 0 3px 0 #4975c6;
+}
+a.button_lplan.standard:hover {
+	box-shadow: 0 3px 0  #0d3d9a;
+}
+a.button_lplan:active {
+	top: 3px;
+	box-shadow: 0 3px 0  #000080;
+}
+
+/**------------------------------------------
+ ■ ︎ アメノシズク　ボタン
+------------------------------------------**/
+a.button_price {
+	font-size: 80%;
+	background: #d30000;
+	color: #fff;
+	display: block;
+	border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px;
+	padding: 6px 1px;
+	text-align: center;
+	line-height: 1.2;
+}
+a.button_price:hover {
+　opacity: .8;
+  transition: 0.8s ;
+　color: #fff;
+}
+@media screen and (max-width: 700px) {
+	a.button_price {
+		font-size: 7px;
+	}
+}
+
+/**------------------------------------------
+ ■ ︎ ロゴスタディベーシック　ボタン
+------------------------------------------**/
+a.voice_button {
+	display: table;
+	margin: 0 auto;
+	padding: 10px 30px;
+	width: 50%;
+	text-align: center;
+	border: dashed #3498DB 2px;
+}
+a.voice_button:hover {
+	background: #3498DB;
+	color: #fff;
+}
+@media screen and (max-width: 700px) {
+	a.voice_button {
+		width: 80%;
+		}
+}
+/**------------------------------------------
+ ■ ︎ ハフリⅡ　ボタン
+------------------------------------------**/
+ul.hafuri-box li {
+	display: block;
+	width: 48%;
+	float: left;
+}
+ul.hafuri-box li:first-child {
+	margin-right: 4%;
+}
+@media screen and (max-width: 780px) {
+	ul.hafuri-box li {
+		width: 100%;
+		clear: both;
+	}
+	ul.hafuri-box li:first-child {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+}
+a.button_hafuri {
+	position: relative;
+	border-radius: 4px;
+	color: #fff;
+	line-height: 1.5;
+	-webkit-transition: none;
+	transition: none;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	display: block;
+	font-weight: bold;
+	padding: 15px 0;
+	text-align: center;
+	font-size: 20px;
+}
+a.button_hafuri.hisui {
+	background-color: #4EBAD0;
+	box-shadow: 0 3px 0 #399AB2;
+}
+a.button_hafuri.touka {
+	background-color: #EE69DF;
+	box-shadow: 0 3px 0 #D054C2;	
+}
+a.button_hafuri span {
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+a.button_hafuri:hover {
+	top: -4px;
+	color: #fff;
+}
+a.button_hafuri.hisui:hover {
+	box-shadow: 0 3px 0 #399AB2;
+}
+a.button_hafuri.touka:hover {
+	box-shadow: 0 3px 0 #D054C2;
+}
+a.button_hafuri:active {
+	top: 3px;
+	box-shadow: none;
+}
+/**------------------------------------------
+ ■ ︎ Nigi　ボタン
+------------------------------------------**/
+ul.nigi-box li {
+	display: block;
+	width: 48%;
+	float: left;
+}
+ul.nigi-box li:first-child {
+	margin-right: 4%;
+}
+@media screen and (max-width: 780px) {
+	ul.nigi-box li {
+		width: 100%;
+		clear: both;
+	}
+	ul.nigi-box li:first-child {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+}
+a.button_nigi {
+	position: relative;
+	border-radius: 4px;
+	color: #fff;
+	line-height: 1.5;
+	-webkit-transition: none;
+	transition: none;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	display: block;
+	font-weight: bold;
+	padding: 15px 0;
+	text-align: center;
+	font-size: 20px;
+}
+a.button_nigi.normal {
+	background-color: #4A88EE;
+	box-shadow: 0 3px 0 #3A71CA;
+}
+a.button_nigi.izanigi {
+	background-color: #F56CD5;
+	box-shadow: 0 3px 0 #DA5BBC;	
+}
+a.button_nigi span {
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+a.button_nigi:hover {
+	top: -4px;
+	color: #fff;
+}
+a.button_nigi.normal:hover {
+	box-shadow: 0 3px 0 #3A71CA;
+}
+a.button_nigi.izanigi:hover {
+	box-shadow: 0 3px 0 #DA5BBC;
+}
+a.button_nigi:active {
+	top: 3px;
+	box-shadow: none;
+}
+/**------------------------------------------
+ ■ ︎ 囲み・装飾
+------------------------------------------**/
+.info01 {
+	background :#fff2d2;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	padding: 15px;
+	text-align: center;
+	border: solid #ffd879 1px;
+}
+.info01 h3, .info01-2 h3 {
+	font-size: 120%;
+	border-bottom: solid #ffd879 2px;
+	padding-bottom: 6px;
+	margin-bottom: 8px;
+	text-align: center;
+}
+.info01-2 {
+	background :#fff2d2;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	padding: 20px;
+	border: solid #ffd879 1px;
+}
+
+.info02 {
+	background :#e2f2ff;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	padding: 15px;
+	text-align: center;
+	border: solid #95d1ff 1px;
+	font-weight: bold;
+	
+}
+.info02 h3 {
+	font-size: 120%;
+	border-bottom: solid #95d1ff 2px;
+	padding-bottom: 6px;
+	margin-bottom: 8px;
+	
+}
+.info02-2 {
+	background :#e2f2ff;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	padding: 15px;
+	border: solid #95d1ff 1px;
+	font-weight: bold;
+}
+.info03 {
+	background: #f4f4f4;
+	padding: 30px;
+	margin-bottom: 30px;
+}
+.info04 {
+	background: #f0eee4;
+	padding: 30px;
+	margin-bottom: 30px;
+}
+.info05 {
+	background :#f9eaea;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	padding: 15px;
+	border: solid #e6a9a9 1px;
+	font-weight: bold;
+	color: #5b0000;
+}
+
+
+.lpbox {
+    margin: 0 auto;
+    background: #ffe6e6;
+	max-width: 1000px;
+	text-align:left;
+}
+.lpbox .box-title {
+    font-size: 1.2em;
+    background: #e35f5f;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.lpbox p {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+.lpbox2 {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #e35f5f;
+	max-width: 1000px;
+}
+.lpbox2 .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -27px;
+    left: -3px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    font-size: 17px;
+    background: #e35f5f;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+.lpbox2 p {
+    margin: 0; 
+    padding: 0;
+}
+
+/**------------------------------------------
+ ■ ︎ ロゴサウンド　囲み・装飾
+------------------------------------------**/
+/**  ロゴサウンド　トップ説明  **/
+.info06 {
+	background: #000;
+	padding: 30px;
+	color: #fff;
+}
+/**  ロゴサウンド　からだで感じる  **/
+.info07 {
+	background: #e5ecef;
+	padding: 30px;
+}
+/**  ロゴサウンド　使用方法  **/
+.info08 {
+	background: #fcf8ed;
+	padding: 30px;
+}
+/**  ロゴサウンド　CD説明　囲み  **/
+.note {
+  font-size: 16px;
+  color: #222;
+  padding:2rem;
+  background-color: #c3c3c3;
+  background-image: linear-gradient( rgba(255,255,255,.3) .1em, transparent .1em );
+  background-size: auto 2rem;
+  line-height: 2rem;
+  overflow: hidden;
+}
+.note > p { margin: 0 0 0rem; }
+.note > p:first-letter { margin-left: 1rem; }
+/**  ロゴサウンド　フキダシ  **/
+
+/**  ロゴサウンド　CD内容　囲み  **/
+.logobox {
+    margin: 2em 0;
+    background: #dcefff;
+}
+.logobox .box-title {
+    font-size: 1.2em;
+    background: #5fb3f5;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.logobox p {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+/**------------------------------------------
+ ■ ︎ D子コラム　囲み・装飾
+------------------------------------------**/
+.d-column {
+	background: #ffd49c;
+	margin: 0;
+	padding: 1px 20px 30px 20px;
+}
+.d-column-contents {
+	background: #fff;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+	padding: 20px;
+	margin: 20px 10px 0 10px;
+}
+@media screen and (max-width: 500px) {
+	.d-column {
+		padding: 1px 8px 20px 8px;
+	}
+}
+
+/**------------------------------------------
+ ■ ︎ アメノシズク　体験談　囲み・装飾
+------------------------------------------**/
+.a_taiken {
+	background: url(../img/product/a_stripe.png) repeat;
+	padding: 30px 30px 1px 30px;
+}
+.a_taiken div.taiken_content {
+	background: #fff;
+	padding: 30px;
+	margin-bottom: 30px;
+	font-size: 110%;
+	line-height: 1.5;
+}
+.a_taiken div.taiken_content h3.product02 {
+	position: relative;
+	padding: .5em .75em;
+	background-color: #fff;
+	border: 2px solid #ff8a00;
+	border-radius: 6px;
+	font-size: 20px;
+}
+.a_taiken div.taiken_content h3.product02::before,
+.a_taiken div.taiken_content h3.product02::after {
+	position: absolute;
+	top: 100%;
+	left: 30px;
+	content: '';
+	height: 0;
+	width: 0;
+	border: 10px solid transparent;
+}
+.a_taiken div.taiken_content h3.product02::before {
+	border-top: 15px solid #ff8a00;
+}
+.a_taiken div.taiken_content h3.product02::after {
+	margin-top: -4px;
+	border-top: 15px solid #fff;
+}
+@media screen and (max-width: 700px) {
+	.a_taiken {
+		padding: 10px 10px 1px 10px;
+	}
+	.a_taiken div.taiken_content {
+		padding: 10px;
+	}
+}
+/**------------------------------------------
+ ■ ︎ ロゴスタディベーシックお客様の声　囲み・装飾
+------------------------------------------**/
+div.seminar-voioce {
+	padding-top: 20px;
+	margin-bottom: 30px;
+}
+div.seminar-voioce h4 {
+	position: relative;
+	padding: .5em .75em;
+	background-color: #fff;
+	border: 2px solid #666;
+	border-radius: 6px;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+div.seminar-voioce h4::before,
+div.seminar-voioce h4::after {
+	position: absolute;
+	top: 100%;
+	left: 30px;
+	content: '';
+	height: 0;
+	width: 0;
+	border: 10px solid transparent;
+}
+div.seminar-voioce h4::before {
+	border-top: 15px solid #666;
+}
+div.seminar-voioce h4::after {
+	margin-top: -4px;
+	border-top: 15px solid #fff;
+}
+
+/**------------------------------------------
+ ■ ︎ ロゴストロンL　囲み・装飾
+------------------------------------------**/
+span.underline01 {
+	font-weight: bold;
+	background: linear-gradient(transparent 60%, #ffff66 60%);
+}
+
+/**------------------------------------------
+ ■ ︎ ロゴフェス　囲み・装飾
+------------------------------------------**/
+
+div.benefits.pink {
+	margin-bottom: 50px;
+	padding: 20px 40px;
+	background: #fff;
+	border-right: #f4438e solid 10px;
+	border-left: #f4438e solid 10px;
+	border-bottom: #f4438e solid 10px;
+}
+div.benefits.green {
+	margin-bottom: 50px;
+	padding: 20px 40px;
+	background: #fff;
+	border-right: #91c231 solid 10px;
+	border-left: #91c231 solid 10px;
+	border-bottom: #91c231 solid 10px;
+}
+
+div.benefits p {
+}
+/**------------------------------------------
+ ■ ︎ リスト　共通
+------------------------------------------**/
+/**  リスト --　丸やじるし  **/
+ul.list01 li {
+	position: relative;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: dashed 1px #ccc;
+	padding-left: 2em;
+}
+ul.list01 li::after,
+ul.list01 li::before {
+	display: block;
+	content: '';
+	position: absolute;
+}
+ul.list01 li::after {
+	top: .35em;
+	left: 0;
+	width: 14px;
+	height: 14px;
+	background-color: #3498db;
+	border-radius: 100%;
+}
+ul.list01 li::before {
+	z-index: 2;
+	top: .625em;
+	left: .225em;
+	width: 4px;
+	height: 4px;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+ul.list02 li {
+	position: relative;
+}
+ul.list02 li::after,
+ul.list02 li::before {
+	display: block;
+	content: '';
+	position: absolute;
+}
+ul.list02 li::after {
+	top: 9px;
+	left: -1em;
+	width: 6px;
+	height: 6px;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+ul.list02 li::before {
+	top: 12px;
+	left: -1.025em;
+	width: 8px;
+	height: 1px;
+	background-color: #666;
+}
+
+/**  リスト --　プレッド  **/
+ul.list03 {
+	margin: 30px 0;
+}
+
+ul.list03 li {
+	position: relative;
+	padding-left: 25px;
+	margin-bottom: 7px;
+}
+ul.list03 li::after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: .7em;
+	left: 0;
+	width: 12px;
+	height: 4px;
+	border-left: 3px solid #3498db;
+	border-bottom: 3px solid #3498db;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+/**  リスト --　プレッド（backgroundあり）  **/
+ul.list04 {
+	margin: 30px 0 0;
+}
+
+ul.list04 li {
+	position: relative;
+	padding: 5px 10px 5px 40px;
+	margin-bottom: 7px;
+	font-weight: bold;
+	background: #f4f4f4;
+}
+ul.list04 li::after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: .9em;
+	left: 1em;
+	width: 12px;
+	height: 4px;
+	border-left: 3px solid #3498db;
+	border-bottom: 3px solid #3498db;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+/**  リスト --　吹き出し  **/
+ul.list05 li {
+	position: relative;
+	padding: .5em .75em;
+	background-color: #f0f0f0;
+	border-radius: 6px;
+	margin-bottom: 30px;
+}
+ul.list05 li::after {
+	position: absolute;
+	top: 100%;
+	left: 30px;
+	content: '';
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top: 15px solid #f0f0f0;
+}
+/**  LP用リスト --　プレッド  **/
+.list_title {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #3498db;
+}
+ul.list06 {
+	margin: 10px 0;
+	padding-left: 1em;
+	font-weight:bold;
+}
+
+ul.list06 li {
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 7px;
+	font-size: 1.2em; 
+}
+ul.list06 li::after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: .7em;
+	left: 0;
+	width: 12px;
+	height: 4px;
+	border-left: 3px solid #3498db;
+	border-bottom: 3px solid #3498db;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+/**------------------------------------------
+ ■ ︎ その他
+------------------------------------------**/
+.img-center {
+	display: table;
+	margin: 30px auto 30px;
+}
+.img-circle {
+	border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;
+}
+.img-kadomaru {
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px;
+}
+.float-right {
+	float: right;
+}
+.float-left {
+	float: left;
+}
+.text-b {
+	font-weight: bold;
+	font-size: 110%;
+}
+.text-center {
+	text-align: center;
+}
+.text-line {
+	text-decoration: underline;
+}
+.width100 {
+	width: 100%;
+	height: auto;
+}
+.width90 {
+	width: 90%;
+	height: auto;
+}
+.width80 {
+	width: 80%;
+	height: auto;
+}
+.width70 {
+	width: 70%;
+	height: auto;
+}
+.width60 {
+	width: 60%;
+	height: auto;
+}
+.width50 {
+	width: 50%;
+	height: auto;
+}
+.width40 {
+	width: 40%;
+	height: auto;
+}
+.width30 {
+	width: 30%;
+	height: auto;
+}
+.width20 {
+	width: 20%;
+	height: auto;
+}
+.width10 {
+	width: 10%;
+	height: auto;
+}
+
+.padding-l {
+	padding-left: 20px;
+}
+@media screen and (max-width: 700px) {
+	.width90, .width80, .width70, .width60, .width50, .width40, .width30, .width20, .width10 {
+		width: 100%;
+	}
+	.padding-l {
+		padding-left: 0;
+	}
+	.img-circle {
+		width: 80%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.float-right {
+		clear: both
+	}
+}
+.float-left {
+	float: left;
+}
+.margin-l {
+	margin: 0 30px 10px 0;
+}
+.float-right {
+	float: right;
+}
+.margin-r {
+	margin: 0 0 10px 30px;
+}
+.cf:before,
+.cf:after {
+
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+
+img.no-spacing{
+	vertical-align: bottom;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 100%; /*20170824*/
+}
+a.underline {
+	text-decoration: underline;
+}
+a.underline:hover {
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+	.float-left, .float-right {
+		float: none;
+	}
+	.margin-r, .margin-l {
+		margin: 0 0 30px 0;
+	}
+	.trimming {
+		position:relative;
+		border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;
+		display: block;
+		margin: 0 auto 40px auto;
+		width: 250px;
+		height: 250px;
+		overflow: hidden;
+		text-align: center;
+	}
+	.trimming img {
+		position:absolute;
+		top:-140px;
+		left:0px;
+	}
+	.trimming2 {
+		position:relative;
+		border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%;
+		display: block;
+		margin: 0 auto 40px auto;
+		width: 250px;
+		height: 250px;
+		overflow: hidden;
+		text-align: center;
+	}
+	.trimming2 img {
+		position:absolute;
+		top:-80px;
+		left:0px;
+	}
+	.notrimming {
+		position:relative;
+		display: block;
+		margin: 0 auto 40px auto;
+		text-align: center;
+	}
+}
+
+/**------------------------------------------
+ ■ ︎ Youtube
+------------------------------------------**/
+.youtube {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.youtube iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/**------------------------------------------
+ ■ ︎ vimeo
+------------------------------------------**/
+div.embed-vimeo {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  padding-top: 56.25%;
+}
+ 
+div.embed-vimeo iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/**------------------------------------------
+ ■ ︎ コンテンツ下商品一覧
+------------------------------------------**/
+.product-list-box {
+	width: 33%;
+
+	display: inline-block;
+}
+
+@media screen and (max-width: 780px) {
+	.product-list-box {
+		width: 100%;
+		display: block;
+		margin-bottom: 30px;
+	}
+	.product-list-box .listphoto {
+		display: inline-block;
+		width: 40%;
+	}
+	.product-list-box .listphoto img {
+		width: 100%!important;
+	}
+}
+@media screen and (min-width: 780px) {
+	.oversea-width {
+		padding: 0 80px;
+	}
+}
+
+/**------------------------------------------
+ ■ ︎ D子インタビュー
+------------------------------------------**/
+.dko-interview {
+	padding: 20px;
+	margin: 20px 0px;
+	background: #f5f5f5;
+	border-radius: 10px;        /* CSS3草案 */  
+    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
+    -moz-border-radius: 10px;   /* Firefox用 */  
+}
+.dko-interview h3{
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.dko-interview a {
+    color: #34a1d2;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+.dko-interview .link-text {
+    margin: 3%;
+    width: 78%;
+}
+.dko-interview img {
+    width: 15%;
+}
+}
+
+/**------------------------------------------
+ ■ ︎ 最新情報ボックス（LOGOSOUNDサイト等）
+------------------------------------------**/
+.news-box {
+	float: left;
+}
+.news-box.box-l {
+	width: 32%;
+}
+.news-box.box-r {
+	width: 60%;
+	margin:0 4%;
+}
+.news-box a.button_text {
+    margin: 20px auto;
+}
+@media screen and (max-width: 600px) {
+.news-box {
+	float: none;
+}
+.news-box.box-l {
+	width: 100%;
+}
+.news-box.box-r {
+	width: 100%;
+	margin:20px auto;
+}
+.news-box a.button_text {
+    width: 80%;
+    text-align: center;
+    display: block;
+    float: none;
+}
+}
+
+/**------------------------------------------
+ ■ ︎ 感想
+------------------------------------------**/
+.bar1 {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #f7f7f7;
+  border: 0;
+}
+
+/**------------------------------------------
+ ■ ︎ テキストレスポンシブ右寄せ・左寄せ
+------------------------------------------**/
+@media screen and (min-width:961px) {
+.textleftright {
+	text-align: right;
+	}
+}
+
+@media only screen and (max-width:960px){
+.textleftright {
+	text-align: left;
+	}
+}

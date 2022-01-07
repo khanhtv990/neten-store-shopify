@@ -1,0 +1,206 @@
+{{ 'custom-form.css' | asset_url | stylesheet_tag }}
+{{ 'custom-common.css' | asset_url | stylesheet_tag }}
+
+<script>
+  
+  
+function isCheck() {
+    var arr_checkBoxes = document.getElementsByClassName("check");
+    var count = 0;
+    for (var i = 0; i < arr_checkBoxes.length; i++) {
+        if (arr_checkBoxes[i].checked) {
+            count++;
+        }
+    }
+    if (count > 0) {
+        return true;
+    } else {
+        window.alert("1つ以上選択してください。");
+        return false;
+    };
+ 
+}
+  
+  //以下追加
+   function fillHidden(hiddenname) {
+    //checkboxのelementを取得
+    const checkboxes = document.querySelectorAll('[hidden-data="'+hiddenname+'"]');
+    
+    //hidden elementを取得。ここに送信するデータをvalueとして保持
+    const hiddenfield = document.getElementById(hiddenname);
+    hiddenfield.value = ""
+    var i;
+    for (i = 0; i < checkboxes.length; i++) {
+      const x = checkboxes[i];
+      if(x.checked){
+        //checkされたチェックボックスの値をhidden elementのvalueとして格納。
+        if(hiddenfield.value==""){
+          hiddenfield.value = x.value;
+          }else{
+          //複数あるときは、","で連結
+          hiddenfield.value = hiddenfield.value + ", " + x.value; 
+          } 
+        }
+      }
+    }
+  
+  
+//   const buttonElement = document.getElementsByClassName('ProductForm__AddToCart')[0];
+
+// // Add a handler for the 'click' event by providing a callback function.
+// // Whenever the element is clicked, a pop-up with "Element clicked!" will
+// // appear.
+// buttonElement.addEventListener('click', function (event) {
+//   alert('Element clicked through function!');
+// });
+
+
+</script>
+
+
+
+<!-- カスタムフォーム -->
+<div class="custom-form">
+<!--フォームセクション  -->
+<div class="custom-form__section">
+
+  
+   	<!--1つ以上のチェックが必須のパターン（そのままコピペ）  -->
+    <input type="checkbox" class="check" name="sample01" value="サンプル0１">
+    <input type="checkbox" class="check" name="sample01" value="サンプル02">
+    <input type="checkbox" class="check" name="sample01" value="サンプル03">
+    <input type="checkbox" class="check" name="sample01" value="サンプル04">
+    <input type="checkbox" class="check" name="sample01" value="サンプル05">
+     
+    <input type="submit" value="内容を確認する" onClick="return isCheck()">
+  
+  
+</div>
+</div>
+
+
+
+
+
+<!-- カスタムフォーム -->
+<div class="custom-form">
+<!--フォームセクション  -->
+<div class="custom-form__section">
+
+<!-- 属性に以下追加
+hidden-data="sample01" onchange="fillHidden('sample01')"
+で、以下を追加、この値が実際に送信される値になる。roperties[sample01]
+<input type="hidden" id="sample01" name="properties[sample01]">
+-->
+  
+   	<!--1つ以上のチェックが必須のパターン（修正バージョン）  -->
+    <input type="checkbox" class="check" value="サンプル01" hidden-data="sample01" onchange="fillHidden('sample01')">
+    <input type="checkbox" class="check" value="サンプル02" hidden-data="sample01" onchange="fillHidden('sample01')">
+    <input type="checkbox" class="check" value="サンプル03" hidden-data="sample01" onchange="fillHidden('sample01')">
+    <input type="checkbox" class="check" value="サンプル04" hidden-data="sample01" onchange="fillHidden('sample01')">
+    <input type="checkbox" class="check" value="サンプル05" hidden-data="sample01" onchange="fillHidden('sample01')">
+    <input type="hidden" id="sample01" name="properties[sample01]">
+    <input type="submit" value="内容を確認する" onClick="return isCheck()">
+  
+  
+</div>
+</div>
+
+
+
+<!-- ProductForm__AddToCart Button Button--primary Button--full -->
+
+
+<!-- カスタムフォーム -->
+<div class="custom-form">
+<!--フォームセクション  -->
+<div class="custom-form__section">
+  
+<!--1つ以上のチェックが必須のパターン  -->
+<div class="custom-form__group">
+    <label class="custom-form__label Form__Label">お持ちのロゴストロン発信機*</label>
+  <div class="grid__item cart-form__grid--align-left">
+    <div class="grid__item">
+      <input type="hidden" class="check" name="properties[Ampire]" value="No">
+      <input type="checkbox" class="check" id="useMachine1" name="properties[Ampire]" value="Yes">
+      <label for="useMachine1">Ampire</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" class="check" name="properties[CFB]" value="No">
+      <input type="checkbox" class="check" id="useMachine2" name="properties[CFB]" value="Yes">
+      <label for="useMachine2">CFB</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" class="check" name="properties[ロゴストロン1000]" value="No">
+      <input type="checkbox" class="check" id="useMachine3" name="properties[ロゴストロン1000]" value="Yes">
+      <label for="useMachine3">ロゴストロン1000</label>
+    </div>
+    <input type="hidden" id="sample01" name="properties[sample01]">
+  </div>
+  </div>
+  
+</div>
+</div>
+
+
+
+
+
+<!-- カスタムフォーム -->
+<div class="custom-form">
+<!--フォームセクション  -->
+<div class="custom-form__section">
+  
+
+<div class="custom-form__block">
+  <label class="custom-form__label Form__Label">会員規約*</label>
+  <p>
+    下記規約をお読みいただき、ご同意いただけましたら、「同意」にチェックをお願いいたします。(必須)
+  </p>
+  <p>
+    <a href="https://s.neten.jp/kokushukaikiyaku" class="cartbtn" target="_blank"> 圀手會国際委員会 会員規約はこちら»</a><br clear="left">
+  </p>
+</div> 
+  
+<input type="hidden" name="properties[同意]" value="No">
+<input required type="checkbox" id="useMachine6" name="properties[同意]" value="Yes">
+<label >同意します</label>
+
+</div>
+</div>
+
+
+
+
+
+<!-- カスタムフォーム -->
+<div class="custom-form">
+<!--フォームセクション  -->
+<div class="custom-form__section">
+  
+<!--特にチェックが必要なしのパターン  -->
+<div class="custom-form__group">
+    <label class="custom-form__label Form__Label">お持ちのロゴストロン発信機*</label>
+  <div class="grid__item cart-form__grid--align-left">
+    <div class="grid__item">
+      <input type="hidden" name="properties[Ampire]" value="No">
+      <input type="checkbox" id="useMachine1" name="properties[Ampire]" value="Yes">
+      <label for="useMachine1">Ampire</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[CFB]" value="No">
+      <input type="checkbox" id="useMachine2" name="properties[CFB]" value="Yes">
+      <label for="useMachine2">CFB</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[ロゴストロン1000]" value="No">
+      <input type="checkbox" id="useMachine3" name="properties[ロゴストロン1000]" value="Yes">
+      <label for="useMachine3">ロゴストロン1000</label>
+    </div>
+  </div>
+  </div>
+  
+</div>
+</div>
+
+

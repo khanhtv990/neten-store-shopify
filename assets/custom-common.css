@@ -1,0 +1,508 @@
+
+/* shopify theme.css を上書きする。 */
+.Rte h3{
+ margin: 0;
+}
+
+ul {
+  list-style:none;
+}
+
+
+  
+/***********************************************
+  デフォルトテーブル
+/*********************************************** */
+table {
+    margin: 15px auto 20px auto;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+table th {
+    padding: 8px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    background-color: #f0f0f0;
+    font-weight: normal;
+　　text-align: center !important;
+}
+table td {
+    padding: 2%;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* ==============================================
+ パーツ
+=============================================== */
+/* ボタン
+----------------------------------------------- */
+.btn_area {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    direction: rtl;
+}
+
+.btn_area a {
+    color: #fff;
+}
+
+.btn_area li {
+    width: 100%;
+    margin: 1% auto;
+    display: inline-block;
+}
+
+.btn_area li input {
+width: 100%;
+}
+
+.btnStyle01 i,
+.btnStyle02 i,
+.btnStyle03 i,
+.btnStyle03d i,
+.btnStyle04 i,
+.btnStyle05 i,
+.btnStyle06 i,
+.btnStyle07 i {
+	margin: 0 5px 0 0;
+}
+.btnStyle03 i.rsp,
+.btnStyle03d i.rsp,
+.btnStyle04 i.rsp,
+.btnStyle06 i.rsp {
+	margin: 0 0 0 5px;
+}
+
+.btnStyle01 {
+	display: block;
+	width: 100%;
+	color: #FFF;
+/*	font-family: 'Raleway', sans-serif;*/
+	/*font-family: Mplus, 'Raleway', sans-serif;*/
+	font-weight: 700;
+	background-color: #999;
+	border: none;
+	outline: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 10px 0;
+	cursor: pointer;
+	margin: 0;
+}
+.btnStyle01:hover {
+	background-color:#4A88EE;
+}
+.btnStyle02 {
+	display: block;
+	width: 100%;
+	color: #FFF;
+/*	font-family: 'Raleway', sans-serif;*/
+	/*font-family: Mplus, 'Raleway', sans-serif;*/
+	font-weight: 700;
+	background-color: #4A88EE;
+	border: none;
+	outline: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 10px 0;
+	cursor: pointer;
+	margin: 0;
+}
+.btnStyle03 {
+	display: block;
+	width: 100%;
+	color: #FFFFFF;
+	font-size: 120%;
+	background-color: #4169E1 !important;
+	border: none;
+	outline: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 15px 0;
+	cursor: pointer;
+	text-decoration: none !important;
+	margin: 0;
+}
+.btnStyle03 i {
+	font-size: 120%;
+}
+.btnStyle03d {
+	display: block;
+	width: 100%;
+	color: #FFFFFF;
+	font-size: 120%;
+	background-color: #999 !important;
+	border: none;
+	outline: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 15px 0;
+	cursor: pointer;
+	text-decoration: none !important;
+	margin: 0;
+}
+.btnStyle03d i {
+	font-size: 120%;
+}
+.btnStyle04 {
+	display: block;
+	width: 100%;
+	font-size: 120%;
+	font-weight: normal;
+	color: #FFF !important;
+	background-color:#4169E1;
+	border: none;
+	outline: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 15px 0;
+	cursor: pointer;
+	text-decoration: none !important;
+	margin: 0;
+}
+.btnStyle04 i {
+	color: #FFFFFF;
+	font-size: 120%;
+}
+.btnStyle04:hover {
+	opacity: 0.5;
+    transition: 0.8s;
+}
+.btnStyle05 {
+	display: block;
+	width: 100%;
+	color: #FFFFFF;
+	font-size: 120%;
+	background-color: #4A88EE;
+	border: none;
+	outline: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 15px 0;
+	cursor: pointer;
+	text-decoration: none !important;
+	margin: 0;
+}
+.btnStyle05 i {
+	color: #FFF !important;
+	font-size: 120%;
+}
+.btnStyle05:hover {
+	opacity: 0.5;
+    transition: 0.8s;
+}
+.btnStyle06 {
+	display: block;
+	width: 100%;
+	color: #FFF !important;
+	font-size: 120%;
+	background-color: #4A88EE;
+	border: none;
+	outline: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 15px 0;
+	cursor: pointer;
+	text-decoration: none !important;
+	margin: 0;
+}
+.btnStyle06 i {
+	font-size: 120%;
+}
+.btnStyle07 {
+	display: inline-block;
+	color: #FFF !important;
+	font-size: 90%;
+	background-color: #4A88EE;
+	border: none;
+	outline: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 5px 10px;
+	cursor: pointer;
+	text-decoration: none !important;
+	margin: 0;
+}
+.btnStyle07 i {
+	color: #FFF !important;
+}
+.cartbtn {
+	display: inline-block;
+	color: #FFF !important;
+	font-size: 90%;
+	background-color: #4169E1 !important;
+	border: none;
+	outline: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	padding: 5px 10px;
+	cursor: pointer;
+	text-decoration: none !important;
+	margin: 0;
+}
+.cartbtn i {
+	font-size: 90%;
+}
+a.cartbtn:hover {
+  opacity: 0.5;
+  transition: 0.8s;
+}
+
+
+/* ==============================================
+LP　画像
+=============================================== */
+/* パソコンで見たときは"imgpc"のclassがついた画像が表示される */
+.imgpc {display: block !important;}
+.imgsp { display: none !important; }
+ 
+/* スマートフォンで見たときは"imgsp"のclassがついた画像が表示される */
+@media only screen and (max-width: 550px) {
+    .imgpc { display: none !important; }
+    .imgsp { display: block !important; }
+}
+
+/* ==============================================
+ 画像左右設定
+=============================================== */
+.grid-image {
+display: block;
+width: 50%;
+float: left;
+}
+@media only screen and (max-width : 600px){
+.grid-image {
+width: 100%;
+float: none;
+}
+}
+
+/* ==============================================
+ テキストシャドウ設定
+=============================================== */
+.ts{
+  color: #FFFFFF;
+  font-weight: bold
+  text-shadow:  1px 1px 3px #333 !important; /*なぜかchromeで上書きされるのでimportant追加*/
+}
+
+/* ==============================================
+ YouTube画面サイズ調整
+=============================================== */
+.youtube-re {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.youtube-re iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+@media only screen and (min-width: 718px) {
+  .youtube-re {
+    /*width: 718px;*/
+    padding-top: 403.875px; /* 718px × 56.25% */
+  }
+  .youtube-re iframe {
+    width: 718px !important;
+    margin: 0 auto;
+  }
+}
+
+/* ==============================================
+ 商標登録関連右上表示
+=============================================== */
+span.supText {
+font-size: 45%;
+vertical-align: top;
+position: relative;
+top: -0.5em;
+}
+span.supTextlp {
+font-size: 45%;
+vertical-align: top;
+position: relative;
+top: -0.1em;
+}
+/*  モバイル用 */
+@media screen and (max-width: 960px) {
+span.supText {
+font-size: 60%;
+vertical-align: top;
+position: relative;
+top: -0.5em;
+}
+span.supTextlp {
+font-size: 60%;
+vertical-align: top;
+position: relative;
+top: -0.1em;
+}
+}
+
+
+/* ==============================================
+ PCのみ改行・スマホのみ改行
+=============================================== */
+@media screen and (min-width: 768px){	
+  .br-pc { display:block; }
+  .br-sp { display:none; }
+}
+@media screen and (max-width: 768px){	
+  .br-pc { display:none; }
+  .br-sp { display:block; }
+}
+
+/* ==============================================
+ PCは真ん中・スマホは左寄せ（テキストレスポンシブ対応）
+=============================================== */
+@media screen and (min-width:961px) {
+.textcontent {
+	text-align: center;
+	}
+}
+
+@media only screen and (max-width:960px){
+.textcontent {
+	text-align: left;
+	}
+}
+
+/* ==============================================
+ 体験談
+=============================================== */
+blockquote {
+	position: relative;
+	border: 1px solid #8BC0B8;
+	border-radius: 10px;
+	padding: 20px;
+}
+blockquote:before {
+	position: absolute;
+	font-family: 'FontAwesome';
+	content: '\f10d';
+	font-size: 20px;
+	color: #8BC0B8;
+	top: 10px;
+	left: 10px;
+}
+blockquote:after {
+	position: absolute;
+	font-family: 'FontAwesome';
+	content: '\f10e';
+	font-size: 20px;
+	color: #8BC0B8;
+	right: 10px;
+	bottom: 10px;
+}
+blockquote cite {
+	display: block;
+	font-size: 0.8rem;
+	text-align: right;
+	color: #D4DED7;
+	padding-right: 20px;
+}
+
+/* ==============================================
+ 目次デザイン
+=============================================== */
+.table-of-contents {
+    margin-left: 0;
+    padding: 15px 10px 15px 35px; /* 枠内の余白(上右下左) */
+    font-size: 100%;  /* 文字サイズ */
+    border:dotted 1px #777;  /* 線の種類と色 */
+    background:#f7f7f7;  /* 背景 */
+}
+.table-of-contents:before {
+    content: "目次";
+    font-size: 1.2em;
+    line-height:50px;
+    font-weight:bold;   /* 文字の太さ　通常はnormal */    
+    color:#000;  /* 文字の色 */
+}
+
+/*目次のリストスタイル*/
+
+/*大見出し*/
+.table-of-contents li{
+    list-style-type:disc;   /* リストスタイルの種類 */
+}
+
+/*中見出し*/
+.table-of-contents li ul li{
+    margin-left:20px; 
+    list-style-type:circle;
+}
+
+/*小見出し*/
+.table-of-contents li ul li ul li{
+    list-style-type:circle;
+
+}
+
+
+/* ==============================================
+ 目次デザインカート用
+=============================================== */
+.table-of-contents2 {
+    margin-left: 0;
+    padding: 5px 5px 5px 10px; /* 枠内の余白(上右下左) */
+    font-size: 100%;  /* 文字サイズ */
+    border:dotted 1px #777;  /* 線の種類と色 */
+    background:#f7f7f7;  /* 背景 */
+}
+.table-of-contents2:before {
+    content: "目次";
+    font-size: 1.2em;
+    line-height:50px;
+    font-weight:bold;   /* 文字の太さ　通常はnormal */    
+    color:#000;  /* 文字の色 */
+}
+
+/*目次のリストスタイル*/
+
+/*大見出し*/
+.table-of-contents2 li{
+    list-style-type:disc;   /* リストスタイルの種類 */
+}
+
+/*中見出し*/
+.table-of-contents2 li ul li{
+    margin-left:10px; 
+    list-style-type:circle;
+}
+
+/*小見出し*/
+.table-of-contents2 li ul li ul li{
+    list-style-type:circle;
+
+}

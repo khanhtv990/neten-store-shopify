@@ -1,0 +1,50 @@
+{{ 'custom-form.css' | asset_url | stylesheet_tag }}
+
+<!-- 
+Formタイプに合わせ、以下を設定する。
+Form__Label
+Form__Input
+Form__Textarea
+
+-->
+<!-- カスタムフォーム -->
+<div class="custom-form">
+<!--フォームセクション  -->
+<div class="custom-form__section">
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">お名前※</label>
+  <input class="custom-form__item--half Form__Input" required type="text" name="properties[姓]" placeholder="例）山田" aria-label="姓" />
+  <input class="custom-form__item--half Form__Input" required type="text" name="properties[名]" placeholder="例）太郎" aria-label="名" />
+</div>
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">ふりがな（ひらがな）※</label>
+  <input class="custom-form__item--half Form__Input" required type="text" pattern="[\u3041-\u3096ー]*" name="properties[ふりがな姓]" placeholder="例）やまだ" aria-label="姓" />
+  <input class="custom-form__item--half Form__Input" required type="text" pattern="[\u3041-\u3096ー]*" name="properties[ふりがな名]" placeholder="例）たろう" aria-label="名" />
+</div>
+
+
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">当日参加される親御様、お子様のお名前を【ひらがな】でご記入ください。</label>
+  <input class="Form__Input" type="text" pattern="[\u3041-\u3096ー、]*" name="properties[参加者名]" placeholder="例）たろう、はなこ" aria-label="参加者名" />
+</div>
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">初めての方はお子様のお名前と年齢のご記入もお願いいたします。</label>
+  <input class="Form__Input" type="text" name="properties[お子様のお名前と年齢]" placeholder="例）山田太郎9歳" aria-label="お子様のお名前と年齢" />
+</div>
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">白川学館会員※</label>
+  <div class="">
+    <input required class="" type="radio" id="shirakawa1" name="properties[白川会員]" value="はい" checked> <label for="shirakawa1">はい</label>
+    <br>
+    <input required class="" type="radio" id="shirakawa2" name="properties[白川会員]" value="いいえ"> <label for="shirakawa2">いいえ</label>
+  </div>
+</div>
+  
+
+  
+</div>
+</div>
+

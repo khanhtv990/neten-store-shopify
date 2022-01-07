@@ -1,0 +1,246 @@
+<style>
+  .custom-form{
+    margin-top:3rem;
+  }
+  
+/*  flexスタイルのgroup  */
+  .custom-form__group{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom:2rem;
+  }
+  .custom-form input {
+  	margin-bottom: 1rem;  
+  }
+
+  .custom-form__section{
+    margin-bottom:3rem;
+  }
+  
+  .custom-form__title{
+    font-size:1.2em;
+    font-weight:800;
+    margin-bottom:1rem;
+  }
+  
+  .custom-form__title--sub{
+    font-size:1.2em;
+    font-weight:800;
+    margin-bottom:1rem;
+  }
+  
+
+  .custom-form__item--half.custom-form__item--half{
+    width:100%;
+  }
+  
+  @media only screen and (min-width: 750px) {
+    /* inputを横に並べるため。
+  	.custom-form__groupなどと組み合わせる */
+	.custom-form__item--half.custom-form__item--half{
+       width: 47%;
+    }
+  }
+  
+  .custom-form__label{
+    width:100%;
+    font-size:1em;
+    font-weight:800;
+  }
+  
+  .custom-form__label--small{
+    width:100%;
+  }
+  
+</style> 
+
+<!-- 
+Formタイプに合わせ、以下を設定する。
+Form__Label
+Form__Input
+Form__Textarea
+
+-->
+<!-- カスタムフォーム -->
+<div class="custom-form">
+<!--フォームセクション  -->
+<div class="custom-form__section">
+  
+<div class="custom-form__group">
+    <label class="custom-form__label Form__Label">＜大型機発信について＞</label>
+    <label class="custom-form__label Form__Label--small">※「ふりがな（ひらがな）」は、構文発信用です。ご入会されるご本人様のひらがなお名前を姓名別々にひらがなでご入力ください。</label>
+    <label class="custom-form__label Form__Label--small">ひらがな以外（記号・スペースなど）はご入力できませんのでご注意ください。</label>
+</div>
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">お名前（本名）*</label>
+  <input class="custom-form__item--half Form__Input" required type="text" name="properties[姓]" placeholder="例）山田" aria-label="姓" />
+  <input class="custom-form__item--half Form__Input" required type="text" name="properties[名]" placeholder="例）太郎" aria-label="名" />
+</div>
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">ふりがな（ひらがな）*</label>
+  <input class="custom-form__item--half Form__Input" required type="text" pattern="[\u3041-\u3096ー]*" name="properties[ふりがな姓]" placeholder="例）やまだ" aria-label="姓" />
+  <input class="custom-form__item--half Form__Input" required type="text" pattern="[\u3041-\u3096ー]*" name="properties[ふりがな名]" placeholder="例）たろう" aria-label="名" />
+</div>
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">性別*</label>
+  <div class="cart-form__grid--align-left">
+      <input id="custom-form-radio1" required type="radio" name="properties[性別]" value="男性"> <label for="custom-form-radio1">男性</label>
+    <br>
+      <input id="custom-form-radio2" required type="radio" name="properties[性別]" value="女性"> <label for="custom-form-radio2">女性</label>
+    </div>
+</div>
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">生年月日*</label>
+  <input class="Form__Input" required type="text" name="properties[生年月日]" placeholder="例）1980年1月1日" aria-label="生年月日" />
+</div>
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">会社名</label>
+  <input class="Form__Input" type="text" name="properties[会社名]" placeholder="会社名をご記入ください" aria-label="会社名" />
+</div>
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">ご職業*</label>
+  <input class="Form__Input" required type="text" name="properties[ご職業]" placeholder="ご職業をご記入ください" aria-label="ご職業" />
+</div>
+  
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">役職</label>
+  <input class="Form__Input" type="text" name="properties[役職]" placeholder="例）役職をご記入ください" aria-label="役職" />
+</div>
+  
+  
+  <div class="custom-form__group">
+    <label class="custom-form__label Form__Label">お持ちのロゴストロン発信機*</label>
+  <div class="grid__item cart-form__grid--align-left">
+    <div class="grid__item">
+      <input type="hidden" name="properties[Ampire]" value="No">
+      <input type="checkbox" id="useMachine1" name="properties[Ampire]" value="Yes">
+      <label for="useMachine1">Ampire</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[CFB]" value="No">
+      <input type="checkbox" id="useMachine2" name="properties[CFB]" value="Yes">
+      <label for="useMachine2">CFB</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[ロゴストロン1000]" value="No">
+      <input type="checkbox" id="useMachine3" name="properties[ロゴストロン1000]" value="Yes">
+      <label for="useMachine3">ロゴストロン1000</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[100Ti]" value="No">
+      <input type="checkbox" id="useMachine4" name="properties[100Ti]" value="Yes">
+      <label for="useMachine4">100Ti</label>
+    </div>
+     <div class="grid__item">
+      <input type="hidden" name="properties[BETTEN]" value="No">
+      <input type="checkbox" id="useMachine5" name="properties[BETTEN]" value="Yes">
+      <label for="useMachine5">BETTEN</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[Holo]" value="No">
+      <input type="checkbox" id="useMachine6" name="properties[Holo]" value="Yes">
+      <label for="useMachine6">Holo</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[ロゴストロンL]" value="No">
+      <input type="checkbox" id="useMachine7" name="properties[ロゴストロンL]" value="Yes">
+      <label for="useMachine7">ロゴストロンL</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[クイントエッセンス]" value="No">
+      <input type="checkbox" id="useMachine8" name="properties[クイントエッセンス]" value="Yes">
+      <label for="useMachine8">クイントエッセンス</label>
+    </div>
+  </div>
+  </div>
+  
+  
+  <div class="custom-form__group">
+    <label class="custom-form__label Form__Label">お持ちの神器*</label>
+  <div class="grid__item cart-form__grid--align-left">
+    <div class="grid__item">
+      <input type="hidden" name="properties[十種神宝]" value="No">
+      <input type="checkbox" id="shinki1" name="properties[十種神宝]" value="Yes">
+      <label for="shinki1">十種神宝</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[天之御剣]" value="No">
+      <input type="checkbox" id="shinki2" name="properties[天之御剣]" value="Yes">
+      <label for="shinki2">天之御剣</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[天沼矛神瑛體]" value="No">
+      <input type="checkbox" id="shinki3" name="properties[天沼矛神瑛體]" value="Yes">
+      <label for="shinki3">天沼矛神瑛體</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[天之寶玉]" value="No">
+      <input type="checkbox" id="shinki4" name="properties[天之寶玉]" value="Yes">
+      <label for="shinki4">天之寶玉</label>
+    </div>
+     <div class="grid__item">
+      <input type="hidden" name="properties[天之御鏡]" value="No">
+      <input type="checkbox" id="shinki5" name="properties[天之御鏡]" value="Yes">
+      <label for="shinki5">天之御鏡</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[寶調]" value="No">
+      <input type="checkbox" id="shinki6" name="properties[寶調]" value="Yes">
+      <label for="shinki6">寶調</label>
+    </div>
+  </div>
+  </div>
+  
+  
+  <div class="custom-form__group">
+    <label class="custom-form__label Form__Label">ご登録状況(複数選択可）*</label>
+  <div class="grid__item cart-form__grid--align-left">
+    <div class="grid__item">
+      <input type="hidden" name="properties[圀手會]" value="No">
+      <input type="checkbox" id="toouroku1" name="properties[圀手會" value="Yes">
+      <label for="toouroku1">圀手會</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[販売店/WBP]" value="No">
+      <input type="checkbox" id="toouroku2" name="properties[販売店/WBP]" value="Yes">
+      <label for="toouroku2">販売店/WBP</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[白川一般会員]" value="No">
+      <input type="checkbox" id="toouroku3" name="properties[白川一般会員]" value="Yes">
+      <label for="toouroku3">白川一般会員</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[白川修習会員]" value="No">
+      <input type="checkbox" id="toouroku4" name="properties[白川修習会員]" value="Yes">
+      <label for="toouroku4">白川修習会員</label>
+    </div>
+     <div class="grid__item">
+      <input type="hidden" name="properties[neten会員]" value="No">
+      <input type="checkbox" id="toouroku5" name="properties[neten会員]" value="Yes">
+      <label for="toouroku5">neten会員</label>
+    </div>
+    <div class="grid__item">
+      <input type="hidden" name="properties[maforama会員]" value="No">
+      <input type="checkbox" id="toouroku6" name="properties[maforama会員]" value="Yes">
+      <label for="toouroku6">maforama会員</label>
+    </div>
+  </div>
+  </div>
+  
+
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">圀手會国際委員会へのご入会にあたり、ご意志をお聞きしております。
+ご入会にあたり、その意気込み、ご意志を記入してください。*</label>
+  <textarea class="Form__Textarea" name="properties[ご意志]" required="required">{{ properties["ご意志"] }}</textarea>
+</div>
+  
+</div>
+</div>

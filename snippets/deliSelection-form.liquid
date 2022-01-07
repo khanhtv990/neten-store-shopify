@@ -1,0 +1,52 @@
+<style type="text/css">
+  .order-attributes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 340px;
+    margin-top: 30px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    padding: 30px 15px;
+  }
+  @media only screen and (max-width: 375px){
+    .order-attributes .form-group{
+        width: 100%;
+    }
+     
+    .order-attributes{
+      flex-wrap: wrap;
+      padding: 20px 15px;
+    }
+    
+    .order-attributes .form-group + .form-group{
+      margin-top: 10px;
+    }
+
+  }
+  
+</style>
+
+<div class="cartDeliInfo"> 
+  <br>  
+  <label>配達希望時間:</label>
+  <select name="attributes[配達希望時間]">
+    <option value="">指定しない</option>
+    <option value="0812" {% if cart.attributes["配達希望時間"] == "0812" %} selected="selected"{% endif %}>午前中（12時まで）</option>
+    <option value="1416" {% if cart.attributes["配達希望時間"] == "1416" %} selected="selected"{% endif %}>14時から16時</option>
+    <option value="1618" {% if cart.attributes["配達希望時間"] == "1618" %} selected="selected"{% endif %}>16時から18時</option>
+    <option value="1820" {% if cart.attributes["配達希望時間"] == "1820" %} selected="selected"{% endif %}>18時から20時</option>
+    <option value="1921" {% if cart.attributes["配達希望時間"] == "1921" %} selected="selected"{% endif %}>19時から21時</option>
+  </select>
+
+  <div class="order-attributes"> 
+      <div class="form-group">
+          <label for="checkbox_invoice">宛名</label>
+          <input type="checkbox" name="checkbox_invoice" value="" id="checkbox_invoice" >
+      </div>
+      <div class="form-group">
+        <label for="customer_invoice">領収書希望</label>
+        <input type="text" name="customer_invoice" value="" id="customer_invoice" >
+    </div>
+  </div>
+</div>

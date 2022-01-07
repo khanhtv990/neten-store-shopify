@@ -1,0 +1,178 @@
+<style>
+  .line-item-property_box {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .line-item-property--align-left {
+    text-align: left;
+  }
+  .line-item-property-form__radio {
+    margin-bottom: 20px;
+  }
+  .line-item-property-form__grid {
+    margin-top: 15px;
+  }
+  .custom-form__label {
+    font-size:1em;
+    font-weight: bold;
+  }
+</style> 
+
+
+<div class="Grid">
+    <div class="Grid__Cell Form__Label"><span style="font-size:1.2em; font-weight: bold;">お名前※</span></div>
+            <div class="Grid__Cell 2/3 Form__Item">
+              <input required="required" type="text" class="Form__Input" name="properties[姓]" aria-label="姓" placeholder="例）山田">
+              <label class="Form__FloatingLabel">姓</label>
+            </div>
+              <div class="Grid__Cell 2/3 Form__Item">
+              <input required="required" type="text" class="Form__Input" name="properties[名]" aria-label="名" placeholder="例）太郎">
+              <label class="Form__FloatingLabel">名</label>
+            </div>
+  <div class="Grid__Cell Form__Label"><span style="font-size:1.2em; font-weight: bold;">ふりがな※</span></div>
+            <div class="Grid__Cell 2/3 Form__Item">
+              <input type="text" pattern="[\u3041-\u3096ー]*" class="Form__Input" name="properties[姓(かな)]" aria-label="姓(かな)" placeholder="例）やまだ" >
+              <label class="Form__FloatingLabel">姓</label>
+            </div>
+              <div class="Grid__Cell 2/3 Form__Item">
+              <input type="text" pattern="[\u3041-\u3096ー]*" class="Form__Input" name="properties[名(かな)]" aria-label="名(かな)" placeholder="例）たろう" >
+              <label class="Form__FloatingLabel">名</label>
+            </div>
+</div>
+
+
+<div class="grid line-item-property_box">
+  
+  <div class="Form__Item line-item-property-form__grid line-item-property--align-left"><label class="Form__Label custom-form__label">性別※</label>
+  	<div class="cart-form__grid--align-left">
+      <input required class="line-item-property-form__radio" type="radio" id="gender2" name="properties[性別]" value="男性"> <label>男性</label>
+    <br>
+      <input required class="line-item-property-form__radio" type="radio" id="gender3" name="properties[性別]" value="女性"> <label>女性</label>
+	  
+  	</div>
+   </div>
+	
+	
+	
+<div class="Form__Item 2/3"><label class="Form__Label custom-form__label">衣装サイズ（身長）※</label>
+      <label class="Form__Label">半角数字のみでご記入ください。</label>
+      <div class="medium-up--one-half line-item-property__field">
+        <input class="Form__Input" required type="text" pattern="[0-9.]*" name="properties[身長]" placeholder="例）163" />
+      </div>
+    </div>
+	
+	
+	
+	<div class="Form__Item 2/3"><label class="Form__Label custom-form__label">ウエストサイズ</label>
+      <label class="Form__Label">ウエストが90cm以上の方は、こちらにウエストサイズをご入力ください。半角数字のみでご記入ください。</label>
+      <div class="medium-up--one-half line-item-property__field">
+        <input class="Form__Input" type="text" pattern="[0-9.]*" name="properties[ウエスト]" placeholder=" 例）90" />
+      </div>
+    </div>
+	
+	
+	
+	<div class="Form__Item 2/3"><label class="Form__Label custom-form__label">足のサイズ（修習備品一組の足袋用）</label>
+      <label class="Form__Label">半角数字のみでご記入ください。</label>
+      <div class="medium-up--one-half line-item-property__field">
+        <input class="Form__Input" type="text" pattern="[0-9.]*" name="properties[足のサイズ]" placeholder="例）24.5" />
+      </div>
+    </div>
+
+  
+  <div class="Form__Item line-item-property-form__grid line-item-property--align-left">
+    <label class="Form__Label custom-form__label">ZOOMの操作解説※</label>
+    <div class="cart-form__grid--align-left">
+
+        <input required class="line-item-property-form__radio" type="radio" id="zoom_intr1" name="properties[ZOOMの操作解説]" value="解説不要" checked> <label for="zoom_intr1">解説不要</label>
+      <br>
+        <input required class="line-item-property-form__radio" type="radio" id="zoom_intr2" name="properties[ZOOMの操作解説]" value="解説希望"> <label for="zoom_intr2">解説希望</label>
+
+    </div>
+   </div>
+  <div class="Form__Item">
+    <div class="Form__Label custom-form__label"><label>ZOOMの操作解説希望日</label></div>
+    <div class="Select--primary  2/3 " style="margin-bottom: 20px">
+      <select class="" name="properties[ZOOMの操作解説第一説希望日]">
+        <option value="" disabled selected style='display:none;'>第一希望日時を選択</option>
+        <option value="9月30日（木）11:00〜12:00">9月30日（木）11:00〜12:00</option>
+        <option value="9月30日（木）13:30〜14:30">9月30日（木）13:30〜14:30</option>
+        <option value="9月30日（木）14:30〜15:30">9月30日（木）14:30〜15:30</option>
+        <option value="9月30日（木）15:30〜16:30">9月30日（木）15:30〜16:30</option>
+        <option value="9月30日（木）16:30〜17:30">9月30日（木）16:30〜17:30</option>
+        <option value="10月1日（金）11:00〜12:00">10月1日（金）11:00〜12:00</option>
+        <option value="10月1日（金）13:30〜14:30">10月1日（金）13:30〜14:30</option>
+        <option value="10月1日（金）14:30〜15:30">10月1日（金）14:30〜15:30</option>
+        <option value="10月1日（金）15:30〜16:30">10月1日（金）15:30〜16:30</option>
+        <option value="10月1日（金）16:30〜17:30">10月1日（金）16:30〜17:30</option>
+      </select>
+    </div>
+	  <div class="Select--primary  2/3 " style="margin-bottom: 20px">
+      <select class="" name="properties[ZOOMの操作解説第二希望日]">
+        <option value="" disabled selected style='display:none;'>第二希望日時を選択</option>
+        <option value="9月30日（木）11:00〜12:00">9月30日（木）11:00〜12:00</option>
+        <option value="9月30日（木）13:30〜14:30">9月30日（木）13:30〜14:30</option>
+        <option value="9月30日（木）14:30〜15:30">9月30日（木）14:30〜15:30</option>
+        <option value="9月30日（木）15:30〜16:30">9月30日（木）15:30〜16:30</option>
+        <option value="9月30日（木）16:30〜17:30">9月30日（木）16:30〜17:30</option>
+        <option value="10月1日（金）11:00〜12:00">10月1日（金）11:00〜12:00</option>
+        <option value="10月1日（金）13:30〜14:30">10月1日（金）13:30〜14:30</option>
+        <option value="10月1日（金）14:30〜15:30">10月1日（金）14:30〜15:30</option>
+        <option value="10月1日（金）15:30〜16:30">10月1日（金）15:30〜16:30</option>
+        <option value="10月1日（金）16:30〜17:30">10月1日（金）16:30〜17:30</option>
+      </select>
+    </div>
+	  <div class="Select--primary  2/3 " style="margin-bottom: 20px">
+      <select class="" name="properties[ZOOMの操作解説第三希望日]">
+        <option value="" disabled selected style='display:none;'>第三希望日時を選択</option>
+        <option value="9月30日（木）11:00〜12:00">9月30日（木）11:00〜12:00</option>
+        <option value="9月30日（木）13:30〜14:30">9月30日（木）13:30〜14:30</option>
+        <option value="9月30日（木）14:30〜15:30">9月30日（木）14:30〜15:30</option>
+        <option value="9月30日（木）15:30〜16:30">9月30日（木）15:30〜16:30</option>
+        <option value="9月30日（木）16:30〜17:30">9月30日（木）16:30〜17:30</option>
+        <option value="10月1日（金）11:00〜12:00">10月1日（金）11:00〜12:00</option>
+        <option value="10月1日（金）13:30〜14:30">10月1日（金）13:30〜14:30</option>
+        <option value="10月1日（金）14:30〜15:30">10月1日（金）14:30〜15:30</option>
+        <option value="10月1日（金）15:30〜16:30">10月1日（金）15:30〜16:30</option>
+        <option value="10月1日（金）16:30〜17:30">10月1日（金）16:30〜17:30</option>
+      </select>
+    </div>
+	  
+    <p style="margin-top:5px"><a href="https://wagaku.shirakawagakkan.jp/apply/7syudenjyu/" target="_blank" style="color: #34a1d2;">※ZOOM解説内容はこちらをご参照ください。</a></p>
+  </div>
+  <div class="Form__Item line-item-property-form__grid line-item-property--align-left">
+    <label class="Form__Label custom-form__label">お使いの機器※</label>
+    <label class="Form__Label">※当日、お使い予定の機器を選んでください。<br/>スマートフォンは、画面サイズの兼ね合いで、ZOOM解説、および、ご参加のサポート外となります。</label>
+	<div>
+      <div>
+        <input type="hidden" name="properties[パソコン（Window）]" value="No">
+        <input type="checkbox" id="useMachine1" name="properties[パソコン（Window）]" value="Yes">
+        <label for="useMachine1">パソコン（Window）</label>
+      </div>
+      <div>
+        <input type="hidden" name="properties[パソコン（Macintoshなど）]" value="No">
+        <input type="checkbox" id="useMachine2" name="properties[パソコン（Macintoshなど）]" value="Yes">
+        <label for="useMachine2">パソコン（Macintoshなど）</label>
+
+      </div>
+      <div>
+        <input type="hidden" name="properties[タブレット（iPadなど）]" value="No">
+        <input type="checkbox" id="useMachine3" name="properties[タブレット（iPadなど）]" value="Yes">
+        <label for="useMachine3">タブレット（iPadなど）</label>
+      </div>
+      <div>
+        <input type="hidden" name="properties[その他]" value="No">
+        <input type="checkbox" id="useMachine4" name="properties[その他]" value="Yes">
+        <label for="useMachine4">その他</label>
+      </div>
+    </div>  
+  </div>
+ 
+  <div class="Form__Item">
+    <label class="Form__Label custom-form__label">備考</label>
+    <textarea id="custom_memo" name="properties[備考]" class="Form__Textarea">{{ properties["備考"] }}</textarea>
+  </div>
+  
+  
+
+</div>

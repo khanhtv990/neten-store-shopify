@@ -1,0 +1,19 @@
+{{ 'custom-common.css' | asset_url | stylesheet_tag }}
+{{ 'custom-page.css' | asset_url | stylesheet_tag }}
+
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+<div class="Container">
+  <header class="PageHeader">
+    <div class="SectionHeader SectionHeader--center">
+      <h1 class="SectionHeader__Heading Heading u-h1">{{ page.title }}</h1>
+    </div>
+  </header>
+
+  <div class="PageContent">
+    {{ page.content }}
+  </div>
+</div>

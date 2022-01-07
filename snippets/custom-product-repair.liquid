@@ -1,0 +1,74 @@
+<style>
+  .custom-form{
+    margin-top:3rem;
+  }
+  
+/*  flexスタイルのgroup  */
+  .custom-form__group{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom:2rem;
+  }
+  .custom-form input {
+  	margin-bottom: 1rem;  
+  }
+
+  .custom-form__section{
+    margin-bottom:3rem;
+  }
+  
+  .custom-form__title{
+    font-size:1.2em;
+    font-weight:800;
+    margin-bottom:1rem;
+  }
+  
+  .custom-form__title--sub{
+    font-size:1.2em;
+    font-weight:800;
+    margin-bottom:1rem;
+  }
+  
+
+  .custom-form__item--half.custom-form__item--half{
+    width:100%;
+  }
+  
+  @media only screen and (min-width: 750px) {
+    /* inputを横に並べるため。
+  	.custom-form__groupなどと組み合わせる */
+	.custom-form__item--half.custom-form__item--half{
+       width: 47%;
+    }
+  }
+  
+  .custom-form__label{
+    width:100%;
+    font-size:1em;
+    font-weight:800;
+  }
+  
+  .custom-form__label--small{
+    width:100%;
+  }
+  
+</style> 
+
+
+
+<!-- カスタムフォーム -->
+<div class="custom-form">
+<!--フォームセクション  -->
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">修理・点検希望の製品※</label>
+  <input class="Form__Input" required type="text" name="properties[修理・点検希望の製品]" placeholder="例）ロゴストロンL" aria-label="修理・点検希望の製品" />
+</div>
+
+
+<div class="custom-form__group">
+  <label class="custom-form__label Form__Label">故障または不具合の箇所をご記入ください。※</label>
+  <textarea class="Form__Textarea" name="properties[症状]" required="required" rows="5">{{ properties["症状"] }}</textarea>
+</div>
+
+</div>

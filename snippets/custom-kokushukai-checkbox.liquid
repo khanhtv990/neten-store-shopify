@@ -1,0 +1,25 @@
+{{ 'custom-form.css' | asset_url | stylesheet_tag }}
+{{ 'custom-common.css' | asset_url | stylesheet_tag }}
+
+<!-- カスタムフォーム -->
+<div class="custom-form">
+<!--フォームセクション  -->
+<div class="custom-form__section">
+  
+
+<div class="custom-form__block">
+  <label class="custom-form__label Form__Label">会員規約*</label>
+  <p>
+    下記規約をお読みいただき、ご同意いただけましたら、「同意」にチェックをお願いいたします。(必須)
+  </p>
+  <p>
+    <a href="https://s.neten.jp/kokushukaikiyaku" class="cartbtn" target="_blank"> 圀手會国際委員会 会員規約はこちら»</a><br clear="left">
+  </p>
+</div> 
+  
+<input type="hidden" name="properties[同意]" value="No">
+<input required type="checkbox" id="useMachine6" name="properties[同意]" value="Yes">
+<label >同意します</label>
+
+</div>
+</div>

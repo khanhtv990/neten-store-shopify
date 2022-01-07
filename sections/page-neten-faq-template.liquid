@@ -1,0 +1,286 @@
+{%- assign has_section_separator = false -%}
+
+{%- for block in section.blocks -%}
+  {%- if block.type == 'separator' -%}
+    {%- assign has_section_separator = true -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- capture faq_content -%}
+  <div class="Faq">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'separator' -%}
+          <h1 class="Faq__Section Heading u-h1" {{ block.shopify_attributes }}>
+            <span class="Anchor" id="block-{{ block.id }}"></span>
+            {{- block.settings.title | escape -}}
+          </h1>
+
+        {%- when 'question' -%}
+          <div class="Faq__Item {% if section.blocks[forloop.index].type == 'separator' or forloop.last %}Faq__Item--lastOfSection{% endif %}" aria-expanded="false" {{ block.shopify_attributes }}>
+            <span class="Faq__Icon">{% render 'icon' with 'select-arrow-right' %}</span>
+
+            <div class="Faq__ItemWrapper">
+              <button class="Faq__Question">{{ block.settings.title | escape }}</button>
+
+              <div class="Faq__AnswerWrapper" aria-hidden="true">
+                <div class="Faq__Answer Rte">
+                  {{ block.settings.answer }}
+                </div>
+              </div>
+            </div>
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+{%- endcapture -%}
+
+<section data-section-type="faq" data-section-id="{{ section.id }}">
+  <div class="Container">
+    <div class="PageContent {% unless has_section_separator %}PageContent--narrow{% endunless %}">
+      {%- if has_section_separator -%}
+        <div class="PageLayout">
+          <div class="PageLayout__Section PageLayout__Section--secondary PageLayout__Section--sticky hidden-phone">
+            <ol class="FaqSummary">
+              {%- assign faq_separator_count = 0 -%}
+
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'separator' -%}
+                  <li class="FaqSummary__Item {% if faq_separator_count == 0 %}is-active{% endif %}">
+                    <a href="#block-{{ block.id }}" class="FaqSummary__Link" data-offset="80">
+                      <span class="FaqSummary__LinkLabel">{{ block.settings.title | escape }}</span>
+                    </a>
+                  </li>
+
+                  {%- assign faq_separator_count = faq_separator_count | plus: 1 -%}
+                {%- endif -%}
+              {%- endfor -%}
+            </ol>
+          </div>
+
+          <div class="PageLayout__Section">
+            {{- faq_content -}}
+          </div>
+        </div>
+      {%- else -%}
+        {{- faq_content -}}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "separator",
+      "name": "Section separator",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Default"
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "name": "Question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "separator",
+        "settings": {
+          "title": "製品の注文・決済・キャンセルなど"
+        }
+      },
+      {
+        "type": "question",
+        "settings": {
+          "title": "商品が届くまで何日かかりますか。",
+          "answer": "<p>通常、ご入金確認後5営業日以内の発送となりますが、万が一出荷が遅れる場合はメールにてご連絡いたします。（発送業務は土日・祝祭日はお休みをいただいております。）</p>"
+        }
+      },
+      {
+        "type": "question",
+        "settings": {
+          "title": "注文をしましたが注文受付メールが届きません。",
+          "answer": "<p>迷惑メールに入ってしまうことやセキュリティの関係でお手元に届く前に自動的に削除されてしまうこともございますので、受信許可設定をお願いいたします。ご指定のメールアドレスに再送させて頂きますので、サポートセンターまでご連絡ください。</p>"
+        }
+      },
+      {
+        "type": "question",
+        "settings": {
+          "title": "ログインできません。",
+          "answer": "<p>ご入力されたIDとパスワードにお間違いがないか今一度ご確認ください。パスワードをお忘れの方は、ログイン画面のパスワード入力箇所にございます「パースワードお忘れの方」をクリックし、パスワードのリセット後、再設定をお願いいたします。メールアドレスをお忘れの方は、お手数ですが、お問い合わせフォームからお問い合わせください。</p>"
+        }
+      },
+      {
+        "type": "question",
+        "settings": {
+          "title": "商品を別々に注文しましたが、振込みを一緒にすることは可能ですか？",
+          "answer": "<p>大変恐れ入りますが、それぞれのご注文にてご決済くださいますようお願いいたします。ご注文のキャンセルにつきましては以下のご質問をご参照ください。</p>"
+        }
+      },
+
+      {
+        "type": "question",
+        "settings": {
+          "title": "注文をキャンセルしたいのですが…",
+          "answer": "<p>先ずは、お問い合わせフォームよりご連絡ください。ご注文状況確認後ご返答させていただきます。</p>"
+        }
+      },
+
+      {
+        "type": "question",
+        "settings": {
+          "title": "注文後に、商品や個数の変更はできますか？",
+          "answer": "<p>先ずは、お問い合わせフォームよりご連絡ください。ご注文状況確認後ご返答させていただきます。</p>"
+        }
+      },
+
+      {
+        "type": "question",
+        "settings": {
+          "title": "注文後に、発送先を変更することはできますか？",
+          "answer": "<p>先ずは、お問い合わせフォームよりご連絡ください。ご注文状況確認後ご返答させていただきます。</p>"
+        }
+      },
+
+      {
+        "type": "question",
+        "settings": {
+          "title": "注文後に支払方法を変更したい。",
+          "answer": "<p>先ずは、お問い合わせフォームよりご連絡ください。お支払い方法を選択できるメールをお送りいたします。</p>"
+        }
+      },
+
+      {
+        "type": "question",
+        "settings": {
+          "title": "販売店を切り替えたい。",
+          "answer": "<p>ご本人様からのお申出に限り、販売店のご変更を承らせて頂きます。サポートセンターまでご相談ください。</p>"
+        }
+      },
+
+      {
+        "type": "question",
+        "settings": {
+          "title": "先ほどの注文は送料が掛かってしまったのですが、送料が掛からないように注文を追加したい。",
+          "answer": "<p>お問い合わせフォームよりご連絡ください。一旦キャンセル後、新たにご注文を頂く形になります。</p>"
+        }
+      },
+
+      {
+        "type": "question",
+        "settings": {
+          "title": "別天水と他の注文商品を一緒に送って頂けますか？",
+          "answer": "<p>別天水はクール便となりますので、他の注文商品とは同梱することができないため、別注文及び配送になります。</p>"
+        }
+      },
+
+      {
+        "type": "question",
+        "settings": {
+          "title": "お中元として注文したのですが、相手に誰だかわかるように送って頂けますか？",
+          "answer": "<p>ご注文者様が分かるように送り状に記載することをご希望の際には、ご注文時の「注文メモ」にその旨ご要望をご入力ください。 また、お中元の熨斗のご用意はできませんのでご了承くださいませ。</p>"
+        }
+      },
+
+      {
+        "type": "question",
+        "settings": {
+          "title": "分割支払いはできますか？",
+          "answer": "<p>一括でのお支払いにてお願いしております。クレジット会社のリボ払いをご検討ください。リボ払いにつきましてはご利用のクレジット会社までお尋ねください。</p>"
+        }
+      },
+
+      {
+        "type": "question",
+        "settings": {
+          "title": "クレジットカードのキャンセル処理をしてもらったのですが、引き落し予定の通知がきました。",
+          "answer": "<p>ご注文のキャンセルが月をまたいでしまった場合など、クレジットカード会社様のキャンセル処理が間に合わなかったことが考えられます。大変お手数をお掛けいたしますがご利用のクレジットカード会社様までご確認をお願いいたします。</p>"
+        }
+      },
+
+
+
+
+      {
+        "type": "separator",
+        "settings": {
+          "title": "イベント・セミナー申込手続き・お支払いなど"
+        }
+      },
+      {
+        "type": "question",
+        "settings": {
+          "title": "開催の直前に申し込んだ場合は、参加費をいつまでに振り込んだらいいですか？",
+          "answer": "<p>イベントによって異なりますので、イベント毎の申込画面、キャンセルポリシーをご参照ください。</p>"
+        }
+      },
+      {
+        "type": "question",
+        "settings": {
+          "title": "セミナー・講座の領収書を発行していただけますか？ ",
+          "answer": "<p>領収書発行についてをご参照ください。</p>"
+        }
+      },
+      {
+        "type": "question",
+        "settings": {
+          "title": "キャンセルした場合、参加費は返金されますか？ ",
+          "answer": "<p>ご返金の有無はキャンセルポリシーに基づきます。お申し込み前に必ずご一読ください。</p>"
+        }
+      },
+      {
+        "type": "question",
+        "settings": {
+          "title": "別日程への振替は可能でしょうか？ ",
+          "answer": "<p>お問い合わせフォームまでご相談ください。</p>"
+        }
+      },
+      {
+        "type": "question",
+        "settings": {
+          "title": "講座当日、遅刻しての入場は可能ですか？",
+          "answer": "<p>途中入場は可能ですが、イベント等の内容によりお断りする場合がございます。</p>"
+        }
+      },
+
+
+      {
+        "type": "separator",
+        "settings": {
+          "title": "お問い合わせフォーム"
+        }
+      },
+      {
+        "type": "question",
+        "settings": {
+          "title": "お問い合わせフォームについて",
+          "answer": "<p>メニューの「お問い合わせ」よりお願いいたします。</p>"
+        }
+      }
+    ]
+  }
+}
+{% endschema %}
